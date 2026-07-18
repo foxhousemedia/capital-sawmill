@@ -274,8 +274,10 @@ header#header { position: relative; z-index: 99; }
   font-weight: 600;
   line-height: 1.15;
   text-align: center;
-  /* inset text: dark fill clipped to letters, soft light kicking out bottom-right */
-  background-color: #222222;
+  /* inset text: near-black fill with wood grain showing through the letters */
+  background: linear-gradient(rgba(8,6,4,.88), rgba(8,6,4,.88)), url("../tex/h2-bg.jpg");
+  background-size: auto, 600px 120px;
+  background-position: center, center;
   color: transparent;
   text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
