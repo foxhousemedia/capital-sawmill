@@ -147,7 +147,7 @@ header#header { position: relative; z-index: 99; }
 #hero video {
   display: block;
   width: 100%;
-  aspect-ratio: 720 / 300;
+  aspect-ratio: 960 / 404;
   height: auto;
   object-fit: cover;
 }
