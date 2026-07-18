@@ -43,19 +43,23 @@ a:hover, a:active { color: var(--green-hover); text-decoration: none; }
   color: white;
   font-size: 14px;
   font-weight: bold;
-  padding-top: 8px;
-  padding-bottom: 2px;
 }
-#top-info .bar-inner { text-align: right; }
+#top-info .bar-inner { display: flex; align-items: stretch; justify-content: flex-end; }
 #top-info a { display: inline-block; padding: 6px 0; color: white; }
 #top-info svg { font-size: 12px; width: 12px; height: 12px; margin-right: 5px; vertical-align: -1px; }
-#top-info .bar-item { display: inline-block; margin-left: 40px; }
+#top-info .bar-item { display: flex; align-items: center; margin-left: 40px; padding: 8px 0 2px; }
+#top-info #estimate { padding: 0; }
 #top-info #estimate-modal-button {
-  background: #eee;
-  color: var(--maroon);
-  padding: 4px 25px;
-  border-radius: 2px;
+  background: var(--maroon);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 25px;
+  border-radius: 0;
+  transition: background .3s;
 }
+#top-info #estimate-modal-button:hover { background: #5c001e; color: #fff; }
 
 /* ============================================================
    MAIN MENU — exact clone
@@ -169,14 +173,12 @@ header#header { position: relative; z-index: 99; }
   letter-spacing: 5px;
   font-size: clamp(24px, 4.2vw, 58px);
   margin: 0 0 6px;
-  text-shadow: 0 2px 14px rgba(0,0,0,.8);
   line-height: 1.15;
 }
 #hero .hero-sub {
   font-size: clamp(14px, 1.6vw, 21px);
   margin: 0 0 22px;
   max-width: 560px;
-  text-shadow: 0 1px 8px rgba(0,0,0,.9);
   line-height: 1.5;
 }
 
@@ -688,7 +690,10 @@ header#header { position: relative; z-index: 99; }
   #top-info .bar-item { display: block; margin: 0 0 10px; }
   #top-info a { display: block; padding: 12px; color: #333; background: #eee; font-size: 14px; }
   #top-info #top-phone a { font-size: 17px; }
-  #top-info #estimate-modal-button { padding: 12px; border-radius: 0; }
+  #top-info #estimate-modal-button { padding: 12px; border-radius: 0; background: var(--maroon); color: #fff; justify-content: center; height: auto; }
+  #top-info #estimate { padding: 0; }
+  #top-info .bar-inner { display: block; }
+  #top-info .bar-item { display: block; padding: 0; }
 
   #capital-sawmill-logo {
     top: -252px;
