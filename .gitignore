@@ -1,0 +1,6 @@
+rip/
+shots/
+node_modules/
+content-*.txt
+shoot*.js
+package*.json
