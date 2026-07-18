@@ -72,7 +72,7 @@ header#header { position: relative; z-index: 99; }
 #capital-sawmill-logo {
   position: absolute;
   left: 15px;
-  top: 8px;
+  top: 13px; /* puts the log band dead-center on the nav text line */
   z-index: 13;
   width: 144px;
   height: 80px;
@@ -87,25 +87,40 @@ header#header { position: relative; z-index: 99; }
   padding: 40px 13px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.8px;
   display: inline-block;
   transition: color .3s;
-  font-size: 15px;
+  font-size: 16.5px;
 }
 #main-nav ul li a:hover { color: var(--maroon); }
 #main-nav ul li:last-child a { padding-right: 0; }
 
-#main-nav ul li div.sub-menu { display: none; }
-#main-nav ul li:hover div.sub-menu { display: block; z-index: 200; }
 #main-nav ul li div.sub-menu {
   position: absolute;
-  top: 95px;
+  top: 100%; /* flush with the bottom of the nav bar */
+  z-index: 200;
   min-height: 100px;
-  background: rgba(255,255,255,.95);
+  background: rgba(255,255,255,.66);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  backdrop-filter: blur(14px) saturate(1.15);
   color: #333;
   padding: 20px 40px;
   margin-left: -33px;
-  box-shadow: 0 12px 24px rgba(0,0,0,.18);
+  box-shadow: 0 18px 34px rgba(0,0,0,.22);
+  /* hinge-down entrance */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: perspective(900px) rotateX(-16deg);
+  transform-origin: top center;
+  transition: opacity .22s ease, transform .32s cubic-bezier(.3,1.35,.45,1), visibility 0s linear .32s;
+}
+#main-nav ul li:hover div.sub-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: perspective(900px) rotateX(0deg);
+  transition: opacity .16s ease, transform .32s cubic-bezier(.3,1.35,.45,1);
 }
 #main-nav ul li div.sub-menu ul { float: left; }
 #main-nav ul li div.sub-menu ul li { float: none; display: block; }
@@ -727,6 +742,7 @@ header#header { position: relative; z-index: 99; }
     top: -252px;
     left: 50%;
     margin-left: -72px;
+    transform: none;
   }
 
   #main-nav ul { float: none; display: flex; flex-wrap: wrap; }
@@ -738,7 +754,7 @@ header#header { position: relative; z-index: 99; }
   #main-nav > ul > li:first-child a { color: #111; font-size: 17px; }
   #main-nav ul li:nth-child(even) { background: #1e5f00; }
   #main-nav ul li:nth-child(odd) { background: #144e0d; }
-  #main-nav ul li:hover div.sub-menu { display: none; }
+  #main-nav ul li div.sub-menu, #main-nav ul li:hover div.sub-menu { display: none; }
   #main-nav ul li:last-child a { padding-right: 5px; }
 
   .hero-badge { display: none; }
