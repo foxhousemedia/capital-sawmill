@@ -81,12 +81,12 @@ header#header { position: relative; z-index: 99; }
   text-decoration: none;
   text-transform: uppercase;
   padding: 40px 13px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: .5px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
   display: inline-block;
   transition: color .3s;
-  font-size: 16px;
+  font-size: 15px;
 }
 #main-nav ul li a:hover { color: var(--maroon); }
 #main-nav ul li:last-child a { padding-right: 0; }

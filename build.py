@@ -20,7 +20,7 @@ SVG_TRUCK = '<svg aria-hidden="true" viewBox="0 0 640 512" fill="currentColor"><
 
 GA_FONTS = '''<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">'''
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Lato:wght@700&display=swap" rel="stylesheet">'''
 
 def head(title, desc, root='', leaflet=False):
     lf = ''
