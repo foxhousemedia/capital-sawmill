@@ -286,7 +286,7 @@ INDEX_BODY = f'''
 
 <div class="grain-divider"></div>
 
-<section class="section">
+<section class="section section-forest">
   <div class="container">
     {plank('Residential &amp; Commercial Tree Services', alt=True)}
     <p style="max-width:860px;margin:0 auto 34px;text-align:center">With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great. Call now for a free consultation and we&rsquo;ll quickly show you why we&rsquo;re the Albany area&rsquo;s favorite tree &amp; sawmill company.</p>
