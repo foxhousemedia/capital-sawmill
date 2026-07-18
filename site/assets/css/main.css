@@ -81,7 +81,8 @@ header#header { position: relative; z-index: 99; }
   text-decoration: none;
   text-transform: uppercase;
   padding: 40px 13px;
-  font-family: "Roboto Condensed", "roboto-condensed", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   display: inline-block;
   transition: color .3s;
   font-size: 16px;

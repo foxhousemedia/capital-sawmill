@@ -191,8 +191,8 @@ INDEX_BODY = f'''
   </video>
   <div class="hero-shade"></div>
   <div class="hero-copy">
-    <h1>Problem Trees In.<br>Beautiful Lumber Out.</h1>
-    <p class="hero-sub">Expert tree removal and custom sawmilling in the Capital Region &mdash; hire us for either, or let us mill the tree in your yard into a slab worth keeping.</p>
+    <h1>Expert Tree Service.<br>Serious Sawmill.</h1>
+    <p class="hero-sub">Two full trades under one roof in the Capital Region &mdash; take-downs of any size, slabs up to 30&Prime; wide. And when you want, we&rsquo;ll take your tree the whole journey.</p>
     <a class="btn btn-call" href="{PHONE_TEL}">{SVG_PHONE} Call {PHONE_DISPLAY}</a>
     &nbsp; <a class="btn btn-light" href="contact/">Get a Free Estimate</a>
   </div>
