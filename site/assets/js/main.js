@@ -20,13 +20,6 @@
     update();
   }
 
-  // ---------- Plank headings: tiny random rotation for a hand-nailed feel ----------
-  [].slice.call(document.querySelectorAll('.plank')).forEach(function (p, i) {
-    if (p.hasAttribute('data-no-tilt')) return;
-    var base = (i % 2 === 0 ? -1 : 1) * (0.7 + (i * 37 % 10) / 12);
-    p.style.transform = 'rotate(' + base.toFixed(2) + 'deg)';
-  });
-
   // ---------- Service-area map (Leaflet) ----------
   var mapEl = document.getElementById('service-map');
   if (mapEl && window.L) {

@@ -82,7 +82,8 @@ header#header { position: relative; z-index: 99; }
   text-transform: uppercase;
   padding: 40px 13px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: .5px;
   display: inline-block;
   transition: color .3s;
   font-size: 16px;
@@ -204,26 +205,18 @@ header#header { position: relative; z-index: 99; }
   display: flex;
   justify-content: center;
   margin: 0 0 34px;
-  filter: drop-shadow(0 10px 8px rgba(0,0,0,.38)) drop-shadow(0 3px 3px rgba(0,0,0,.28));
 }
 .plank {
   position: relative;
   display: inline-block;
-  padding: 34px 64px;
-  background:
-    linear-gradient(to bottom, rgba(61,41,20,.95) 0%, rgba(61,41,20,0) 12%, rgba(61,41,20,0) 88%, rgba(42,26,11,.95) 100%),
-    url(../tex/h2-bg.jpg);
-  background-size: auto, 600px 120px;
-  background-position: center;
-  -webkit-mask: url("../img/plank-mask-a.svg") center / 100% 100% no-repeat;
-  mask: url("../img/plank-mask-a.svg") center / 100% 100% no-repeat;
-  transform: rotate(-1.1deg);
+  padding: 30px 72px 62px; /* extra bottom: keeps text on the wood face, off the bark edge */
+  background: url("../img/h2-plank-a.jpg") center / 100% 100% no-repeat;
+  min-width: 340px;
 }
 .plank-wrap:nth-of-type(even) .plank,
 .plank.alt {
-  -webkit-mask-image: url("../img/plank-mask-b.svg");
-  mask-image: url("../img/plank-mask-b.svg");
-  transform: rotate(.9deg);
+  background-image: url("../img/h2-plank-b.jpg");
+  padding: 26px 72px 70px; /* plank B carries a deeper bark edge */
 }
 .plank h2, .plank .h2 {
   margin: 0;
@@ -240,25 +233,9 @@ header#header { position: relative; z-index: 99; }
     0 1px 0 rgba(255,255,255,.55),
     0 -1px 1px rgba(40,20,5,.75);
 }
-/* nails */
-.plank::before, .plank::after {
-  content: "";
-  position: absolute;
-  top: 22px;
-  width: 13px; height: 13px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 34% 30%, #d9d9d9 0%, #9a9a9a 34%, #4c4c4c 72%, #303030 100%);
-  box-shadow: 0 2px 3px rgba(30,15,4,.65), inset 0 -1px 2px rgba(0,0,0,.5);
-}
-.plank::before { left: 26px; }
-.plank::after { right: 26px; }
-
 /* smaller plank for h3-level */
-.plank.small { padding: 22px 44px; }
+.plank.small { padding: 20px 48px 44px; }
 .plank.small h3 { margin: 0; font-family: "Roboto Condensed", sans-serif; color: var(--carve); text-transform: uppercase; letter-spacing: 3px; font-size: 19px; text-shadow: 0 1px 0 rgba(255,255,255,.5), 0 -1px 1px rgba(40,20,5,.7); }
-.plank.small::before, .plank.small::after { width: 10px; height: 10px; top: 14px; }
-.plank.small::before { left: 16px; }
-.plank.small::after { right: 16px; }
 
 /* ============================================================
    SECTIONS
@@ -266,16 +243,9 @@ header#header { position: relative; z-index: 99; }
 .section { padding: 72px 0; }
 .section-tight { padding: 48px 0; }
 
-/* dark charred-wood section (parallax via fixed attachment) */
-.section-dark {
-  background: #222 url(../tex/footer-bg.jpg) fixed;
-  color: #eee;
-}
-.section-dark a { color: #7dd87d; }
-.section-dark a:hover { color: #14FF2b; }
-
-/* light paper section */
-.section-cream { background: #f7f3ec; }
+/* body sections stay white so the slab-photo headings blend seamlessly */
+.section-dark { background: #fff; }
+.section-cream { background: #fff; }
 
 /* subtle sawdust divider */
 .grain-divider {
@@ -446,9 +416,9 @@ header#header { position: relative; z-index: 99; }
 #service-map { height: 440px; width: 100%; display: block; z-index: 1; }
 .town-chips { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin-top: 26px; }
 .town-chips span {
-  background: rgba(255,255,255,.09);
-  border: 1px solid rgba(255,255,255,.25);
-  color: #e7e0d2;
+  background: #f4f1ea;
+  border: 1px solid #d8d2c4;
+  color: #4a3b28;
   font-size: 14px;
   padding: 5px 14px;
   border-radius: 30px;
@@ -562,22 +532,22 @@ header#header { position: relative; z-index: 99; }
 }
 .contact-form input, .contact-form textarea {
   width: 100%;
-  background: rgba(0,0,0,.55);
-  color: white;
+  background: #f7f5f0;
+  color: #333;
   padding: 12px 20px;
-  border: none;
+  border: 1px solid #d5cfc2;
   border-radius: 5px;
-  box-shadow: 0 0 7px rgba(0,0,0,.47) inset;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.06);
   margin-bottom: 12px;
   font-family: inherit;
   font-size: 16px;
 }
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: #bbb; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #999; }
 .contact-form textarea { min-height: 130px; resize: vertical; }
 .contact-form button { width: 100%; }
 .contact-info-list { list-style: none; padding: 0; margin: 0; font-size: 17px; }
 .contact-info-list li { margin-bottom: 16px; }
-.contact-info-list svg { width: 17px; height: 17px; margin-right: 10px; vertical-align: -2px; color: #7dd87d; }
+.contact-info-list svg { width: 17px; height: 17px; margin-right: 10px; vertical-align: -2px; color: var(--green); }
 
 /* ============================================================
    FOOTER — dark wood like current
@@ -700,7 +670,7 @@ header#header { position: relative; z-index: 99; }
 
 @media (max-width: 991px) {
   /* iOS/Android don't do background-attachment: fixed */
-  #top-info, #footer, .section-dark { background-attachment: scroll; }
+  #top-info, #footer { background-attachment: scroll; }
 }
 
 @media (max-width: 767px) {
@@ -742,9 +712,8 @@ header#header { position: relative; z-index: 99; }
   .hero-sub { display: none; }
 
   .process, .testimonials, .service-tiles, .species-grid, .footer-grid { grid-template-columns: 1fr; }
-  .plank { padding: 26px 46px; }
-  .plank::before { left: 14px; }
-  .plank::after { right: 14px; }
+  .plank { padding: 22px 34px 48px; min-width: 0; }
+  .plank-wrap:nth-of-type(even) .plank, .plank.alt { padding: 20px 34px 54px; }
   .section { padding: 52px 0; }
   #service-map { height: 320px; }
 }

@@ -9,10 +9,12 @@ Nassau NY. Built July 2026.
 - `build.py` — generates every `site/**/index.html` from shared header/footer templates.
   **Edit build.py, not the generated HTML**, then run `python3 build.py` and commit both.
 - `site/assets/css/main.css` — all styling. Brand: greens `#0e6b17`/`#063a00`/`#075818`,
-  maroon `#780027`. Charred-wood dark bars use `tex/footer-bg.jpg` (fixed-attachment
-  parallax on desktop, scroll on mobile). Live-edge plank H2s: `.plank-wrap`/`.plank`
-  masked by `assets/img/plank-mask-a.svg` / `-b.svg`, maple texture `tex/h2-bg.jpg`,
-  nail heads via ::before/::after.
+  maroon `#780027`. Body sections are WHITE (Kevin's call) — dark charred wood only in
+  the top bar, footer, and mobile hero backdrop. H2 planks: `.plank-wrap`/`.plank` use
+  Kevin's real live-edge slab photos `img/h2-plank-a.jpg`/`h2-plank-b.jpg` (white bg
+  baked in — that's why pages must stay white), alternating A/B, 0 rotation, no CSS
+  masks/nails/shadows, carved text-shadow kept. Source photos live on Kevin's Mac in
+  `~/Sites/Capital Sawmill v4/`. Keep them JPEG. Nav font: Helvetica 300.
 - `site/assets/js/main.js` — parallax, plank tilt, Leaflet service-area map, form UX.
 
 ## Key decisions (from Kevin)
