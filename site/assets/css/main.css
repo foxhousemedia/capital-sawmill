@@ -314,28 +314,23 @@ header#header { position: relative; z-index: 99; }
 .section-dark { background: #fff; }
 .section-cream { background: #fff; }
 
-/* blurred forest-canopy section (CSS-only, no image) */
+/* blurred forest-canopy section (CSS-only, no image) — all layers fixed = parallax */
 .section-forest {
   position: relative;
   overflow: hidden;
   color: #e9efdf;
-  background: linear-gradient(to bottom, #2c4813 0%, #1d3309 55%, #152809 100%);
-}
-.section-forest::before {
-  content: "";
-  position: absolute;
-  inset: -12%;
-  background:
-    radial-gradient(ellipse 30% 22% at 12% 6%, rgba(163,193,92,.55), transparent 62%),
-    radial-gradient(ellipse 26% 20% at 31% 4%, rgba(126,163,62,.5), transparent 60%),
-    radial-gradient(ellipse 30% 22% at 54% 9%, rgba(143,178,78,.46), transparent 62%),
-    radial-gradient(ellipse 27% 19% at 74% 5%, rgba(155,188,88,.5), transparent 60%),
-    radial-gradient(ellipse 24% 21% at 92% 10%, rgba(115,153,58,.45), transparent 62%),
-    radial-gradient(ellipse 32% 26% at 20% 26%, rgba(96,130,48,.3), transparent 66%),
-    radial-gradient(ellipse 36% 28% at 66% 25%, rgba(76,110,38,.26), transparent 66%),
-    radial-gradient(ellipse 30% 24% at 45% 18%, rgba(60,95,30,.22), transparent 68%);
-  filter: blur(32px);
-  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Cpath d='M13 9.5l3.5 3.5-3.5 3.5L9.5 13z' fill='black' fill-opacity='.22'/%3E%3Cpath d='M0 -3.5L3.5 0 0 3.5-3.5 0z' fill='black' fill-opacity='.22'/%3E%3Cpath d='M26 22.5l3.5 3.5-3.5 3.5-3.5-3.5z' fill='black' fill-opacity='.22'/%3E%3Cpath d='M0 22.5L3.5 26 0 29.5-3.5 26z' fill='black' fill-opacity='.22'/%3E%3Cpath d='M26 -3.5L29.5 0 26 3.5 22.5 0z' fill='black' fill-opacity='.22'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 26% 18% at 12% 8%, rgba(163,193,92,.5), transparent 68%),
+    radial-gradient(ellipse 22% 16% at 31% 5%, rgba(126,163,62,.46), transparent 66%),
+    radial-gradient(ellipse 26% 18% at 54% 10%, rgba(143,178,78,.42), transparent 68%),
+    radial-gradient(ellipse 23% 15% at 74% 6%, rgba(155,188,88,.46), transparent 66%),
+    radial-gradient(ellipse 20% 17% at 92% 11%, rgba(115,153,58,.42), transparent 68%),
+    radial-gradient(ellipse 30% 22% at 20% 24%, rgba(96,130,48,.26), transparent 70%),
+    radial-gradient(ellipse 34% 24% at 66% 22%, rgba(76,110,38,.22), transparent 70%),
+    linear-gradient(to bottom, #2c4813 0%, #1d3309 55%, #152809 100%);
+  background-size: 26px 26px, auto, auto, auto, auto, auto, auto, auto, auto;
+  background-attachment: fixed;
 }
 .section-forest::after {
   content: "";
@@ -774,7 +769,7 @@ header#header { position: relative; z-index: 99; }
 
 @media (max-width: 991px) {
   /* iOS/Android don't do background-attachment: fixed */
-  #top-info, #footer { background-attachment: scroll; }
+  #top-info, #footer, .section-forest { background-attachment: scroll; }
 }
 
 @media (max-width: 767px) {
