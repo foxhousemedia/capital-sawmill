@@ -186,7 +186,7 @@ def call_cta(center=True, dark=False):
 
 INDEX_BODY = f'''
 <section id="hero">
-  <video autoplay muted loop playsinline poster="assets/img/wood-slabs-on-forklift.jpg">
+  <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg">
     <source src="assets/vid/header.mp4" type="video/mp4">
   </video>
   <div class="hero-shade"></div>
