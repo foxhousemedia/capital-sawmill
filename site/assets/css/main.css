@@ -274,11 +274,13 @@ header#header { position: relative; z-index: 99; }
   font-weight: 600;
   line-height: 1.15;
   text-align: center;
-  /* pressed into the wood: 25% ink, crisp dark inner top edge, no lightening */
-  color: rgba(0,0,0,.25);
-  text-shadow:
-    0 -1px 0 rgba(28,14,5,.55),
-    0 -2px 1px rgba(28,14,5,.25);
+  /* inset text: dark fill clipped to letters, soft light kicking out bottom-right */
+  background-color: #222222;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 /* tiny very-dark-gray corner dots (tack heads) */
 .plank::before, .plank::after,
