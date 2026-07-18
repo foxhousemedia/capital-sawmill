@@ -248,43 +248,53 @@ header#header { position: relative; z-index: 99; }
 .btn svg { width: 15px; height: 15px; margin-right: 8px; vertical-align: -2px; }
 
 /* ============================================================
-   LIVE-EDGE PLANK HEADINGS — the carved wood H2s
+   PLANK HEADINGS — old-site style: clean maple bar, tiny corner tacks
    ============================================================ */
 .plank-wrap {
-  display: flex;
-  justify-content: center;
+  display: block;
   margin: 0 0 34px;
 }
 .plank {
   position: relative;
-  display: inline-block;
-  padding: 30px 72px 62px; /* extra bottom: keeps text on the wood face, off the bark edge */
-  background: url("../img/h2-plank-a.jpg") center / 100% 100% no-repeat;
-  min-width: 340px;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background: url("../tex/h2-bg.jpg");
+  background-size: 600px 120px;
+  background-position: center center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 3px;
 }
-.plank-wrap:nth-of-type(even) .plank,
-.plank.alt {
-  background-image: url("../img/h2-plank-b.jpg");
-  padding: 26px 72px 70px; /* plank B carries a deeper bark edge */
-}
-.plank h2, .plank .h2 {
+.plank h2, .plank .h2, .plank.small h3 {
   margin: 0;
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-  color: var(--carve);
+  color: black;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: clamp(19px, 2.4vw, 27px);
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
-  /* carved-in effect */
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.55),
-    0 -1px 1px rgba(40,20,5,.75);
 }
-/* smaller plank for h3-level */
-.plank.small { padding: 20px 48px 44px; }
-.plank.small h3 { margin: 0; font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif; color: var(--carve); text-transform: uppercase; letter-spacing: 3px; font-size: 19px; text-shadow: 0 1px 0 rgba(255,255,255,.5), 0 -1px 1px rgba(40,20,5,.7); }
+/* tiny very-dark-gray corner dots (tack heads) */
+.plank::before, .plank::after,
+.plank h2::before, .plank h2::after,
+.plank .h2::before, .plank .h2::after,
+.plank.small h3::before, .plank.small h3::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #2b2b2b;
+}
+.plank::before { top: 7px; left: 7px; }
+.plank::after { top: 7px; right: 7px; }
+.plank h2::before, .plank .h2::before, .plank.small h3::before { bottom: 7px; left: 7px; }
+.plank h2::after, .plank .h2::after, .plank.small h3::after { bottom: 7px; right: 7px; }
+
+.plank.small { padding: 14px 20px; }
+.plank.small h3 { font-size: 19px; letter-spacing: 3px; }
 
 /* ============================================================
    SECTIONS
@@ -767,8 +777,8 @@ header#header { position: relative; z-index: 99; }
   .hero-sub { display: none; }
 
   .process, .testimonials, .service-tiles, .species-grid, .footer-grid { grid-template-columns: 1fr; }
-  .plank { padding: 22px 34px 48px; min-width: 0; }
-  .plank-wrap:nth-of-type(even) .plank, .plank.alt { padding: 20px 34px 54px; }
+  .plank { padding: 16px 14px; }
+  .plank h2, .plank .h2 { font-size: 18px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
   #service-map { height: 320px; }
 }
