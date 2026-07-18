@@ -20,7 +20,7 @@ SVG_TRUCK = '<svg aria-hidden="true" viewBox="0 0 640 512" fill="currentColor"><
 
 GA_FONTS = '''<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Lato:wght@700&display=swap" rel="stylesheet">'''
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">'''
 
 def head(title, desc, root='', leaflet=False):
     lf = ''
@@ -256,7 +256,7 @@ INDEX_BODY = f'''
     </div>
     <div class="split" style="margin-top:56px">
       <div>
-        <h3 style="font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:3px;color:var(--green-dark);font-size:24px">Watch How It&rsquo;s Done</h3>
+        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:3px;color:var(--green-dark);font-size:24px">Watch How It&rsquo;s Done</h3>
         <p>Whether you have a tree that you want turned into lumber or you&rsquo;re looking for that perfect slab of wood for your next project, Capital Sawmill has you covered. We can mill on location or even ship slabs all across the United States. Our friendly staff makes getting the right slab of wood a hassle-free process that won&rsquo;t break the bank.</p>
         <a class="btn btn-call" href="{PHONE_TEL}">{SVG_PHONE} Talk It Through With Steve</a>
       </div>
@@ -372,7 +372,7 @@ INDEX_BODY = f'''
     </div>
     <div class="contact-grid">
       <div>
-        <h3 style="font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Rather write it down?</h3>
+        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Rather write it down?</h3>
         <form id="estimate-form" class="contact-form" action="https://formsubmit.co/{EMAIL}" method="POST">
           <input type="hidden" name="_subject" value="New estimate request from capitalsawmill.com">
           <input type="hidden" name="_captcha" value="false">
@@ -384,7 +384,7 @@ INDEX_BODY = f'''
         </form>
       </div>
       <div>
-        <h3 style="font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Or swing by the mill</h3>
+        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Or swing by the mill</h3>
         <ul class="contact-info-list">
           <li>{SVG_MARKER} 4119 US Highway 20, Nassau, NY 12123</li>
           <li>{SVG_CLOCK} Monday &ndash; Saturday, 8AM &ndash; 6PM</li>
@@ -653,7 +653,7 @@ CONTACT_BODY = f'''
     </div>
     <div class="contact-grid">
       <div>
-        <h3 style="font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Rather write it down?</h3>
+        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Rather write it down?</h3>
         <form id="estimate-form" class="contact-form" action="https://formsubmit.co/{EMAIL}" method="POST">
           <input type="hidden" name="_subject" value="New estimate request from capitalsawmill.com">
           <input type="hidden" name="_captcha" value="false">
@@ -665,7 +665,7 @@ CONTACT_BODY = f'''
         </form>
       </div>
       <div>
-        <h3 style="font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Visit the mill</h3>
+        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Visit the mill</h3>
         <ul class="contact-info-list">
           <li>{SVG_MARKER} 4119 US Highway 20, Nassau, NY 12123</li>
           <li>{SVG_CLOCK} Monday &ndash; Saturday, 8AM &ndash; 6PM</li>
