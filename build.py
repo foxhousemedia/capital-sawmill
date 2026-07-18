@@ -190,6 +190,10 @@ INDEX_BODY = f'''
     <source src="assets/vid/header.mp4" type="video/mp4">
   </video>
   <div class="hero-shade"></div>
+  <div class="hero-badge">
+    <svg aria-hidden="true" viewBox="0 0 512 512" fill="currentColor"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"/></svg>
+    <span>Licensed<br>&amp; Insured</span>
+  </div>
   <div class="hero-copy">
     <h1>Albany NY Region<br>Tree and Sawmill Service</h1>
     <p class="hero-sub">Two full trades under one roof in the Capital Region &mdash; take-downs of any size, slabs up to 30&Prime; wide. And when you want, we&rsquo;ll take your tree the whole journey.</p>

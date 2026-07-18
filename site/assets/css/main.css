@@ -33,7 +33,7 @@ img { max-width: 100%; height: auto; }
 a { color: var(--green); text-decoration: none; transition: color .3s; cursor: pointer; }
 a:hover, a:active { color: var(--green-hover); text-decoration: none; }
 
-.container { max-width: 1170px; margin: 0 auto; padding: 0 15px; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 15px; }
 
 /* ============================================================
    TOP INFO BAR — exact clone of current site
@@ -164,7 +164,7 @@ header#header { position: relative; z-index: 99; }
   text-align: left;
   color: #fff;
   padding: 0 15px;
-  max-width: 1170px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 #hero h1 {
@@ -181,6 +181,34 @@ header#header { position: relative; z-index: 99; }
   max-width: 560px;
   line-height: 1.5;
 }
+
+/* licensed & insured seal on the hero */
+.hero-badge {
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: url(../tex/h2-bg.jpg) center / cover;
+  border: 3px solid var(--green-dark);
+  box-shadow: 0 6px 18px rgba(0,0,0,.45), inset 0 0 0 4px rgba(255,255,255,.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.25;
+  color: var(--carve);
+  text-shadow: 0 1px 0 rgba(255,255,255,.55), 0 -1px 1px rgba(40,20,5,.6);
+}
+.hero-badge svg { width: 22px; height: 22px; color: var(--green); filter: drop-shadow(0 1px 0 rgba(255,255,255,.5)); }
 
 /* Buttons */
 .btn {
@@ -712,6 +740,8 @@ header#header { position: relative; z-index: 99; }
   #main-nav ul li:nth-child(odd) { background: #144e0d; }
   #main-nav ul li:hover div.sub-menu { display: none; }
   #main-nav ul li:last-child a { padding-right: 5px; }
+
+  .hero-badge { display: none; }
 
   /* show the WHOLE video on mobile; copy moves below onto dark wood */
   #hero { background: #222 url(../tex/footer-bg.jpg); }
