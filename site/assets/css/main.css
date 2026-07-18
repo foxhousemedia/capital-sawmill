@@ -258,7 +258,7 @@ header#header { position: relative; z-index: 99; }
   position: relative;
   display: block;
   width: 100%;
-  padding: 20px;
+  padding: 14px 20px;
   background: url("../tex/h2-bg.jpg");
   background-size: 600px 120px;
   background-position: center center;
@@ -267,14 +267,18 @@ header#header { position: relative; z-index: 99; }
 }
 .plank h2, .plank .h2, .plank.small h3 {
   margin: 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-  color: black;
+  font-family: "Expletus Sans", "Lato", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.3;
+  letter-spacing: 5px;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.15;
   text-align: center;
+  /* pressed into the wood: 25% ink, crisp dark inner top edge, no lightening */
+  color: rgba(0,0,0,.25);
+  text-shadow:
+    0 -1px 0 rgba(28,14,5,.55),
+    0 -2px 1px rgba(28,14,5,.25);
 }
 /* tiny very-dark-gray corner dots (tack heads) */
 .plank::before, .plank::after,
@@ -293,8 +297,8 @@ header#header { position: relative; z-index: 99; }
 .plank h2::before, .plank .h2::before, .plank.small h3::before { bottom: 7px; left: 7px; }
 .plank h2::after, .plank .h2::after, .plank.small h3::after { bottom: 7px; right: 7px; }
 
-.plank.small { padding: 14px 20px; }
-.plank.small h3 { font-size: 19px; letter-spacing: 3px; }
+.plank.small { padding: 10px 20px; }
+.plank.small h3 { font-size: 30px; letter-spacing: 4px; }
 
 /* ============================================================
    SECTIONS
@@ -777,8 +781,8 @@ header#header { position: relative; z-index: 99; }
   .hero-sub { display: none; }
 
   .process, .testimonials, .service-tiles, .species-grid, .footer-grid { grid-template-columns: 1fr; }
-  .plank { padding: 16px 14px; }
-  .plank h2, .plank .h2 { font-size: 18px; letter-spacing: 3px; }
+  .plank { padding: 12px 14px; }
+  .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
   #service-map { height: 320px; }
 }
