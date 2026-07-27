@@ -357,10 +357,6 @@ header#header { position: relative; z-index: 99; }
 /* ============================================================
    TWO TRADES SPLIT
    ============================================================ */
-/* trades cards pull up over the hero video */
-.trades-overlap { padding-top: 0; }
-.trades-overlap .trades { position: relative; z-index: 5; margin-top: -50px; }
-
 .trades {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -375,11 +371,10 @@ header#header { position: relative; z-index: 99; }
   min-height: 380px;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 10px 28px rgba(0,0,0,.35);
   transform: translateZ(0);
 }
 .trade-card .trade-bg {
-  position: absolute; inset: -12% 0;
+  position: absolute; inset: 0;
   background-size: cover;
   background-position: center;
   transition: transform .5s;
@@ -1010,8 +1005,6 @@ header#header { position: relative; z-index: 99; }
   .hero-sub { display: none; }
 
   .process, .testimonials, .service-tiles, .species-grid, .footer-grid { grid-template-columns: 1fr; }
-  /* no hero overlap on mobile — the hero copy sits below the video there */
-  .trades-overlap .trades { margin-top: 0; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
