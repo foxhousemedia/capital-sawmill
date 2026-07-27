@@ -50,7 +50,7 @@ def header(root=''):
       <div class="bar-inner">
         <div class="bar-item" id="estimate"><a id="estimate-modal-button" href="{root}contact/">Get A Free Estimate!</a></div>
         <div class="bar-item" id="top-phone"><a href="{PHONE_TEL}">{SVG_PHONE} {PHONE_DISPLAY}</a></div>
-        <div class="bar-item" id="top-address"><a href="https://www.google.com/maps/place/Capital+Sawmill+Service,+LLC+Tree+Service+%26+More/@42.5377159,-73.6647907,17z" target="_blank" rel="noopener">{SVG_MARKER} {ADDRESS}</a></div>
+        <div class="bar-item" id="top-address"><a href="https://www.google.com/maps/place/Capital+Sawmill+Service,+Tree+Service+%26+More/data=!4m2!3m1!1s0x0:0xd58ee223ea17ec14?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">{SVG_MARKER} {ADDRESS}</a></div>
       </div>
     </div>
   </div>
