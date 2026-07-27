@@ -19,6 +19,18 @@ SVG_LI = '<svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><pat
 SVG_CHEVRON = '<svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>'
 SVG_TRUCK = '<svg aria-hidden="true" viewBox="0 0 640 512" fill="currentColor"><path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"/></svg>'
 
+GLYPHS = {
+  'tree': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M36.87,36.426c-1.453.569-3.13.892-4.88.892-1.734,0-3.395-.317-4.839-.875l-2.658,22.202c-.086.721.477,1.355,1.203,1.355h2.524l.66-9.94c.04-.55.52-.97,1.06-.93.55.04.97.51.94,1.06l-.65,9.81h3.54l-.14-5.71c-.01-.55.43-1.01.98-1.02h.02c.54,0,.99.43,1,.97l.14,5.76h2.535c.726,0,1.288-.634,1.203-1.354l-2.638-22.22Z"/> <path d="M47.638,27.023c1.684-1.46,2.739-3.517,2.739-5.804,0-4.288-3.693-7.778-8.333-7.991,0-.02.003-.039.003-.059,0-5.064-4.498-9.169-10.047-9.169s-10.047,4.105-10.047,9.169c0,.02.003.039.003.059-4.64.213-8.333,3.703-8.333,7.991,0,2.287,1.055,4.345,2.739,5.804-3.311,1.571-5.577,4.724-5.577,8.366,0,5.208,4.625,9.429,10.331,9.429h3.017l1.032-8.614c.028-.232.107-.448.209-.652-.432-.276-.837-.572-1.185-.903-.4-.38-.417-1.013-.037-1.414.382-.399,1.014-.417,1.414-.037,1.397,1.327,3.799,2.119,6.424,2.119s5.025-.792,6.423-2.119c.4-.379,1.033-.363,1.414.037.38.4.363,1.033-.037,1.414-.338.321-.731.609-1.148.878.107.205.187.426.215.662l1.024,8.629h3.002c5.706,0,10.331-4.222,10.331-9.429,0-3.641-2.265-6.795-5.577-8.366Z"/> </svg>',
+  'crane': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M12,44c-4.418,0-8,3.582-8,8s3.582,8,8,8,8-3.582,8-8-3.582-8-8-8ZM12,56.926c-2.716,0-4.926-2.209-4.926-4.926s2.21-4.925,4.926-4.925c.553,0,1,.448,1,1s-.447,1-1,1c-1.613,0-2.926,1.312-2.926,2.925s1.312,2.926,2.926,2.926,2.926-1.312,2.926-2.926c0-.552.447-1,1-1s1,.448,1,1c0,2.716-2.21,4.926-4.926,4.926Z"/> <path d="M59.838,50.39h-15.808c-.55,0-1-.45-1-1s.45-1,1-1h15.102c-1.32-2.603-4.015-4.39-7.133-4.39H17.975c2.438,1.826,4.025,4.727,4.025,8s-1.588,6.175-4.026,8h34.026c4.418,0,8-3.582,8-8,0-.551-.056-1.09-.162-1.61ZM39.166,55.253h-13.977c-.553,0-1-.448-1-1s.447-1,1-1h13.977c.553,0,1,.448,1,1s-.447,1-1,1Z"/> <path d="M19.155,5h25.689c.553,0,1-.448,1-1s-.447-1-1-1h-25.689c-.553,0-1,.448-1,1s.447,1,1,1Z"/> <path d="M31,24.59v17.41h2v-17.41l14.324,17.41h2.581s-16.103-19.587-16.103-19.587c1.561-.694,2.656-2.254,2.656-4.07,0-2.114-1.479-3.889-3.458-4.344v-3.289h2.76c1.1,0,2-.9,2-2v-1.71h-11.52v1.71c0,1.1.9,2,2,2h2.76v4.176c0,.552.447,1,1,1,1.355,0,2.458,1.103,2.458,2.458s-1.103,2.458-2.458,2.458-2.458-1.103-2.458-2.458c0-.552-.447-1-1-1s-1,.448-1,1c0,1.816,1.095,3.375,2.656,4.07l-16.103,19.587h2.581s14.324-17.41,14.324-17.41Z"/> </svg>',
+  'firewood': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M12,44c-4.418,0-8,3.582-8,8s3.582,8,8,8,8-3.582,8-8-3.582-8-8-8ZM12,56.925c-2.716,0-4.925-2.209-4.925-4.925s2.209-4.925,4.925-4.925c.552,0,1,.448,1,1s-.448,1-1,1c-1.613,0-2.925,1.312-2.925,2.925s1.312,2.925,2.925,2.925,2.925-1.312,2.925-2.925c0-.552.448-1,1-1s1,.448,1,1c0,2.716-2.209,4.925-4.925,4.925Z"/> <path d="M16.628,42h9.509c-.651-.5-1.012-.898-1.012-.898-1.582-1.821-2.429-4.272-2.145-6.859.24-2.186,1.247-4.102,2.723-5.509.432-.412,1.146-.17,1.198.425.097,1.115.598,2.51,2.455,2.714,0,0,2.551.28,3.302-3.635.239-1.248.503-3.573.677-5.247.076-.735,1.011-1.011,1.471-.434,4.672,5.859,5.568,9.752,5.568,9.752.417,1.212.58,2.532.43,3.89-.253,2.309-1.27,4.466-2.941,5.801h9.529c1.308-2.188,2.165-4.669,2.426-7.309.56-5.658-1.518-10.845-5.151-14.478,0,0-7.667-6.762.135-14.701.555-.565.145-1.518-.647-1.52-3.727-.011-11.214,1.136-13.348,10.173,0,0-.709,3.603-3.778,3.066-2.113-.37-2.731-3.173-2.886-5.361-.062-.879-1.2-1.211-1.738-.513-9.237,11.987-8.286,21.51-8.286,21.51,0,3.337.918,6.459,2.509,9.133Z"/> <path d="M22.01,60h-4.02c.76-.57,1.44-1.25,2.01-2.01.57.76,1.25,1.44,2.01,2.01Z"/> <path d="M17.99,44h4.02c-.76.57-1.44,1.25-2.01,2.01-.57-.76-1.25-1.44-2.01-2.01Z"/> <path d="M28,44c-4.418,0-8,3.582-8,8s3.582,8,8,8,8-3.582,8-8-3.582-8-8-8ZM28,56.925c-2.716,0-4.925-2.209-4.925-4.925s2.209-4.925,4.925-4.925c.552,0,1,.448,1,1s-.448,1-1,1c-1.613,0-2.925,1.312-2.925,2.925s1.312,2.925,2.925,2.925,2.925-1.312,2.925-2.925c0-.552.448-1,1-1s1,.448,1,1c0,2.716-2.209,4.925-4.925,4.925Z"/> <path d="M50.85,50.39c-.55,0-1-.45-1-1s.45-1,1-1h8.283c-1.32-2.603-4.014-4.39-7.133-4.39h-18.01c2.43,1.82,4.01,4.73,4.01,8s-1.58,6.18-4.01,8h18.01c4.42,0,8-3.58,8-8,0-.552-.056-1.09-.162-1.61h-8.988ZM48.989,55.252h-6.799c-.552,0-1-.447-1-1s.448-1,1-1h6.799c.552,0,1,.447,1,1s-.448,1-1,1Z"/> </svg>',
+  'saw': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M45.72,53.65c-.21.05-.41.07-.62.07-1.41,0-2.6-1.06-2.75-2.47l-.22-1.98-1.96.44c-.2.04-.41.07-.61.07-1.42,0-2.6-1.06-2.76-2.47l-.22-1.99-1.95.44c-.2.05-.41.07-.62.07-1.19,0-2.22-.75-2.6-1.84-3.25.51-17.51,2.49-27.41-.67v12.58c8.19-1.19,13.09-3.74,13.15-3.77,6.44-4.04,13.67-4.05,13.98-4.03,8.67-.34,9.74,5.06,9.78,5.28.43,2.43-1,4.97-2.22,6.62h8.48c.48-1.28,1.4-4.15,1.45-7.14-.63.24-1.28.43-1.94.58l-.96.21Z"/> <path d="M38.94,53.74c-.03-.15-.9-3.92-7.78-3.64-.12,0-7.01,0-13.01,3.76-.29.15-5.43,2.84-14.15,4.05v.678c0,.78.632,1.412,1.412,1.412h30.708c1.27-1.39,3.19-4.18,2.82-6.26Z"/> <path d="M31.11,42l-.07-.63-1.95.45c-.21.04-.41.07-.62.07-1.41,0-2.6-1.06-2.75-2.47l-.22-1.99-1.96.44c-.2.05-.41.07-.61.07-1.33,0-2.45-.93-2.72-2.21H5.41c-.78,0-1.41.63-1.41,1.41v4.06c9.35,3.28,23.9,1.3,27.11.8Z"/> <path d="M58.59,35.73h-10.12c.64.26,1.31.57,1.98.91,4.3,2.18,7.53,5.17,9.55,8.82v-8.32c0-.78-.63-1.41-1.41-1.41Z"/> <path d="M47.06,37.33l7.53,9.2c.34.41.49.93.44,1.46-.05.53-.31,1.02-.72,1.35l-1.11.91c-.8.66-1.67,1.23-2.59,1.71.14,3.18-.71,6.27-1.31,8.04h9.29c.78,0,1.41-.63,1.41-1.41v-7.54c-1.78-7.85-8.08-11.8-12.94-13.72Z"/> <path d="M19.786,30.045c-.18,0-.36-.011-.54-.035l-2.813-.364.184,1.662c.051.459.49.771.94.669l3.293-.748c.45-.102.889.21.94.669l.371,3.356c.051.459.49.771.94.669l3.293-.748c.45-.102.889.21.94.669l.372,3.356c.051.459.49.771.94.669l3.293-.748c.45-.102.889.21.94.669l.372,3.356c.051.459.49.771.94.669l3.293-.748c.45-.102.889.21.94.669l.371,3.356c.051.459.49.771.94.669l3.293-.748c.45-.102.889.21.94.669l.372,3.356c.051.459.49.771.94.669l.963-.219c2.087-.474,4.036-1.427,5.693-2.782l1.112-.91-21.839-26.69c-.245.718-.674,1.382-1.303,1.897l-7.449,6.095c-.75.614-1.697.952-2.666.952Z"/> <path d="M11.223,26.348c.357.436.867.72,1.426.792l6.853.887c.603.078,1.212-.096,1.682-.481l7.449-6.095c.944-.773,1.083-2.164.311-3.109l-11.354-13.876c-.629-.768-1.856-.55-2.181.388l-1.521,4.389-7.419,6.071c-1.414,1.157-1.622,3.241-.465,4.655l5.219,6.379ZM10.522,17.196l6.323-5.174c.756-.619,1.871-.507,2.49.249l1.307,1.598c.619.756.507,1.871-.249,2.49l-6.323,5.174c-.756.619-1.871.507-2.49-.249l-1.307-1.598c-.619-.756-.507-1.871.249-2.49Z"/> </svg>',
+  'wheelsaw': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g> <path d="M31.13,46.61c8.67-.34,9.74,5.06,9.78,5.28.43,2.43-1,4.97-2.22,6.62h8.48c.84-2.28,3.09-9.55-.62-13.67-.07-.08-3.47-3.98-14.49-2.45-.69.12-17.07,2.95-28.06-.56v12.58c8.19-1.19,13.09-3.74,13.15-3.77,6.44-4.04,13.67-4.05,13.98-4.03Z"/> <path d="M38.94,52.25c-.03-.15-.9-3.92-7.78-3.64-.12,0-7.01,0-13.01,3.76-.29.15-5.43,2.84-14.15,4.05v.678c0,.78.632,1.412,1.412,1.412h30.708c1.27-1.39,3.19-4.18,2.82-6.26Z"/> <path d="M60,49.56v7.54c0,.78-.63,1.41-1.41,1.41h-9.29c1.07-3.14,2.88-10.4-1.22-14.96-.16-.2-4.01-4.85-16.33-3.14-.18.03-17.25,2.98-27.75-.7v-4.06c0-.78.63-1.41,1.41-1.41h36.1c2.7.48,15.8,3.43,18.49,15.32Z"/> <path d="M58.59,34.24c.78,0,1.41.63,1.41,1.41v8.32c-2.02-3.65-5.25-6.64-9.55-8.82-.67-.34-1.34-.65-1.98-.91h10.12Z"/> </g> <path d="M45.05,32.24c.2-.9.3-1.81.3-2.73,0-7.35-5.98-13.33-13.33-13.33s-13.33,5.98-13.33,13.33c0,.92.1,1.84.3,2.73h-10.64c.02-.03.05-.06.08-.09l3.32-2.91-2.42-3.7c-.23-.33-.29-.74-.18-1.11.11-.39.37-.71.73-.89l4-1.9-1.27-4.25c-.11-.39-.06-.8.16-1.14.23-.34.58-.57.97-.61l4.43-.61.19-4.45c.02-.42.22-.79.54-1.04.33-.25.76-.34,1.16-.25l4.37,1.04,1.95-4.06c.19-.37.52-.65.94-.73.09-.03.2-.04.3-.04.32,0,.62.1.85.3l3.55,2.79,3.55-2.8c.33-.26.74-.36,1.15-.26.42.08.76.36.94.74l1.95,4.04,4.37-1.03c.42-.1.83,0,1.16.25.33.25.52.62.54,1.03l.21,4.46,4.41.61c.4.05.75.27.97.62.22.33.27.74.16,1.13l-1.27,4.25,4,1.9c.36.18.62.5.73.88s.05.79-.18,1.12l-2.42,3.7,3.32,2.91c.04.03.07.06.09.1h-10.65Z"/> <path d="M32.02,18.18c-6.26,0-11.33,5.07-11.33,11.33,0,.94.12,1.86.34,2.73h7.3c-.57-.76-.91-1.71-.91-2.73,0-2.54,2.06-4.6,4.6-4.6s4.6,2.06,4.6,4.6c0,1.02-.34,1.97-.91,2.73h7.3c.22-.87.34-1.79.34-2.73,0-6.26-5.07-11.33-11.33-11.33Z"/> </svg>',
+  'truck': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M59.434,26.457l-5.826-12.343c-.54-1.051-1.622-1.712-2.803-1.712h-11.734c-.727,0-1.317.59-1.317,1.317v25.594h-7.259v-2h5.259v-4.017h-5.255v-2h5.255v-4.017h-5.251v-2h5.251v-4.017h-5.247v-2h5.247v-4.017h-5.243v-1.252c0-1.255-1.017-2.273-2.272-2.273s-2.273,1.018-2.273,2.273v1.252s-10.455,0-10.455,0v-1.252c0-1.255-1.017-2.273-2.272-2.273s-2.273,1.018-2.273,2.273v1.252s-6.966,0-6.966,0v4.017h6.97v2s-4.661,0-4.661,0v4.017h4.665v2s-6.974,0-6.974,0v4.017h6.978v2s-4.669,0-4.669,0v4.017h4.673v1.964c-.012.012-.025.024-.039.036h-5.804c-.648,0-1.173.525-1.173,1.173v3.479c0,1.681,1.363,3.044,3.044,3.044h1.469c.8,3.582,3.998,6.269,7.817,6.269s7.016-2.687,7.816-6.269h13.642v-.002h3.321c.8,3.583,3.998,6.272,7.817,6.272s7.018-2.689,7.817-6.272h1.039c1.261,0,2.284-1.023,2.284-2.284v-15.789c0-.862-.205-1.711-.599-2.477ZM15.509,19.261h10.461v2s-10.462,0-10.462,0v-2ZM15.505,25.278h10.469v2s-10.47,0-10.47,0v-2ZM15.501,31.296h10.477v2s-10.478,0-10.478,0v-2ZM16.296,51.278c-3.316,0-6.015-2.699-6.015-6.018s2.698-6.015,6.015-6.015,6.014,2.698,6.014,6.015-2.698,6.018-6.014,6.018ZM21.648,39.313c-1.191-1.073-2.699-1.794-4.369-2h8.703v2s-4.334,0-4.334,0ZM42.146,17.099c0-.526.426-.952.952-.952h5.892c.53,0,1.02.282,1.286.741l3.831,8.64c.575.991-.14,2.232-1.286,2.232h-9.723c-.526,0-.952-.426-.952-.952v-9.709ZM48.894,51.278c-3.316,0-6.015-2.699-6.015-6.018s2.698-6.015,6.015-6.015,6.015,2.698,6.015,6.015-2.698,6.018-6.015,6.018ZM58.033,36.026h-3.104c-1.039,0-1.881-.842-1.881-1.881v-.854c0-1.039.842-1.881,1.881-1.881h3.104v4.615Z"/> <path d="M48.894,42.055c-1.771,0-3.207,1.437-3.207,3.207s1.436,3.208,3.207,3.208,3.207-1.437,3.207-3.208-1.435-3.207-3.207-3.207Z"/> <path d="M16.296,42.055c-1.771,0-3.207,1.437-3.207,3.207,0,1.771,1.436,3.208,3.207,3.208s3.207-1.437,3.207-3.208-1.435-3.207-3.207-3.207Z"/> </svg>',
+  'forest': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M47.19,60h-2.57l-.14-5.76c-.01-.55-.49-.98-1.02-.98-.55.02-.99.48-.97,1.03l.13,5.71h-3.47l.64-9.81c.03-.55-.38-1.02-.94-1.06-.53-.02-1.02.38-1.06.93l-.64,9.94h-2.57c-.67,0-1.2-.59-1.12-1.26l1.43-12.09c4.81-.86,8.58-4.8,9.24-9.72.54-.14,1.07-.3,1.56-.5l2.62,22.31c.08.67-.45,1.26-1.12,1.26Z"/> <path d="M60,35.39c0,5.21-4.17,9.43-9.31,9.43h-2l-1.01-8.62c-.03-.25-.11-.47-.22-.68.41-.27.8-.55,1.13-.88.4-.38.41-1.01.03-1.41-.39-.4-1.02-.41-1.42-.03-.74.72-1.78,1.28-2.99,1.64-.14-3.25-1.65-6.22-4.08-8.25,1-1.59,1.54-3.44,1.54-5.37,0-4.72-3.23-8.7-7.63-9.74-.16-1.07-.47-2.09-.91-3.04,1.59-2.66,4.47-4.44,7.76-4.44,4.99,0,9.05,4.11,9.05,9.17,0,.02-.01.04-.01.06,4.19.21,7.51,3.7,7.51,7.99,0,2.29-.95,4.34-2.46,5.8,2.98,1.57,5.02,4.73,5.02,8.37Z"/> <path d="M30.513,58.525l-2.59-22.097c-1.435.569-3.09.891-4.818.891-1.711,0-3.351-.316-4.777-.874l-2.61,22.079c-.093.786.521,1.477,1.312,1.477h2.349l.64-9.94c.04-.55.52-.95,1.06-.93.56.04.97.51.94,1.06l-.64,9.81h3.47l-.13-5.71c-.02-.55.42-1.01.97-1.03.53,0,1.01.43,1.02.98l.14,5.76h2.351c.791,0,1.404-.69,1.312-1.475Z"/> <path d="M37.205,27.023c1.517-1.46,2.468-3.517,2.468-5.804,0-4.288-3.328-7.778-7.509-7.991,0-.02.003-.039.003-.059,0-5.064-4.053-9.169-9.052-9.169s-9.052,4.105-9.052,9.169c0,.02.003.039.003.059-4.181.213-7.509,3.703-7.509,7.991,0,2.287.951,4.345,2.468,5.804-2.984,1.571-5.025,4.724-5.025,8.366,0,5.208,4.168,9.429,9.309,9.429h2.015l1.017-8.609c.028-.238.107-.459.215-.665-.425-.275-.823-.57-1.166-.9-.398-.383-.41-1.016-.027-1.414.383-.398,1.017-.409,1.414-.027,1.376,1.324,3.742,2.115,6.328,2.115s4.951-.791,6.327-2.115c.398-.382,1.031-.371,1.414.027s.371,1.031-.027,1.414c-.333.32-.719.607-1.128.875.109.21.191.434.219.675l1.01,8.623h2.001c5.141,0,9.309-4.222,9.309-9.429,0-3.641-2.041-6.795-5.025-8.366Z"/> </svg>',
+  'chainsaw': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path d="M36.61,37.61l-1.41,1.41,1.82,1.82c.19.2.45.29.71.29.25,0,.51-.09.7-.29.39-.39.39-1.02,0-1.41l-1.82-1.82Z"/> <path d="M40.71,33.51l-1.42,1.42,1.82,1.82c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03,0-1.42l-1.82-1.82Z"/> <path d="M44.8,29.42l-1.41,1.41,1.82,1.82c.19.2.45.3.71.3.25,0,.51-.1.7-.3.39-.39.39-1.02,0-1.41l-1.82-1.82Z"/> <path d="M48.9,25.32l-1.42,1.42,1.82,1.82c.2.19.45.29.71.29.25,0,.51-.1.71-.29.39-.39.39-1.02,0-1.42l-1.82-1.82Z"/> <path d="M52.99,21.23l-1.41,1.41,1.82,1.82c.19.2.45.3.7.3.26,0,.52-.1.71-.3.39-.39.39-1.02,0-1.41l-1.82-1.82Z"/> <path d="M59.1,12.11h-.01l-2.83.02c-.272-.915-.72-1.788-1.333-2.574.004.005.009.009.012.014l1.89-1.89c.4-.39.4-1.02,0-1.41-.39-.39-1.02-.39-1.41,0l-1.89,1.89c.016.012.032.027.049.039-.856-.673-1.817-1.141-2.823-1.409.074.019.151.028.224.049l.01-2.83c0-.55-.44-1-.99-1h-.01c-.55,0-1,.44-1,.99l-.01,2.53c.005,0,.01.001.015.001-1.056-.035-2.117.138-3.116.526.021-.008.04-.02.061-.028l-1.17-2.38c-.25-.49-.84-.7-1.34-.46-.5.25-.7.85-.46,1.34l1.199,2.459c-.347.248-.682.519-.993.831l-1.298,1.298-1.818-1.828c-.39-.39-1.03-.39-1.42,0-.39.4-.39,1.03,0,1.42l1.823,1.823-2.68,2.68-1.823-1.823c-.39-.39-1.02-.39-1.41,0-.39.39-.39,1.02,0,1.41l1.823,1.823-2.68,2.68-1.823-1.823c-.39-.39-1.03-.39-1.42,0s-.39,1.03,0,1.42l1.823,1.823-2.68,2.68-1.823-1.823c-.39-.39-1.02-.39-1.41,0-.39.39-.39,1.02,0,1.41l1.823,1.823-2.68,2.68-1.823-1.823c-.39-.39-1.03-.39-1.42,0s-.39,1.03,0,1.42l1.823,1.823-1.157,1.157c.41-.012.672-.019.676-.019,1.258,0,2.439.489,3.328,1.378l.518.518,18.782-18.782c1.301-1.301,3.411-1.301,4.712,0s1.301,3.411,0,4.712l-18.782,18.782,3.107,3.107c.031.031.053.069.083.101l18.936-18.936c.328-.328.613-.681.871-1.048-.014.019-.023.04-.037.059l2.45,1.19c.14.07.29.11.44.11.37,0,.73-.21.9-.57.24-.49.04-1.09-.46-1.33l-2.38-1.17c-.003.008-.008.016-.011.024.378-.983.548-2.025.516-3.064l2.525-.02c.55,0,1-.45,1-1-.01-.55-.45-1-1-1ZM45.058,7.429c-.04.021-.077.047-.117.069.039-.022.077-.048.117-.069ZM50.068,6.639c-.065-.011-.129-.019-.194-.028.065.009.129.017.194.028ZM53.764,8.348c.18.148.359.305.526.472.032.032.056.069.088.101-.032-.033-.059-.069-.092-.102-.168-.168-.344-.322-.522-.472ZM55.615,18.151c.016-.03.036-.059.052-.089-.016.03-.036.059-.052.089ZM56.471,13.065c.007.042.012.085.018.128-.006-.042-.011-.085-.018-.128Z"/> <path d="M15.993,21.229h1.358c.977,0,1.77.793,1.77,1.77v23.508c0,.977-.793,1.769-1.769,1.769h-1.358c-.977,0-1.77-.793-1.77-1.77v-23.508c0-.977.793-1.769,1.769-1.769Z" transform="translate(-19.693 21.972) rotate(-45.007)"/> <path d="M25.516,31.843c-.527-.527-1.247-.813-1.992-.791l-4.142.121,8.747,8.746c1.469,1.47,1.469,3.861,0,5.33l-.961.961c-.712.712-1.659,1.104-2.666,1.104s-1.952-.392-2.664-1.103l-11.365-11.365-4.382,4.383c-1.582,1.583-1.582,4.148,0,5.731l8.304,8.302,1.319,5.535c.282,1.183,1.752,1.599,2.611.739l15.527-15.53c1.057-1.057,1.056-2.77,0-3.827l-8.337-8.336ZM19.44,52.086c-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-2.295-2.295c-.391-.391-.391-1.023,0-1.414s1.023-.391,1.414,0l2.295,2.295c.391.391.391,1.023,0,1.414ZM22.094,49.432c-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-2.294-2.294c-.391-.391-.391-1.023,0-1.414s1.023-.391,1.414,0l2.294,2.294c.391.391.391,1.023,0,1.414Z"/> </svg>',
+  'stump': '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <ellipse cx="32" cy="8.414" rx="15.343" ry="4.412"/> <path d="M11.492,30.861c-.423-.362-1.065-.287-1.393.163l-3.563,4.899c-.346.476-.278,1.136.157,1.531l7.975,7.245v-11.459c-.734-.289-1.388-.846-1.388-.846l-1.789-1.533Z"/> <path d="M57.415,24.032l-3.437-4.726c-.369-.508-1.093-.592-1.57-.184l-1.689,1.448s-2.964,2.55-3.365-.426v-8.406c-1.26.882-2.999,1.512-4.859,1.962v21.944c0,.553-.447,1-1,1s-1-.447-1-1V14.114c-1.618.283-3.229.453-4.617.556v14.635c0,.553-.447,1-1,1s-1-.447-1-1v-14.521c-.912.036-1.585.042-1.878.042-1.378,0-11.065-.11-15.331-3.075v43.834c0,1.477,2.534,2.782,6.411,3.583v-15.578c0-.55.45-1,1-1s1,.45,1,1v15.928c1.426.208,2.98.353,4.62.424v-9.012c0-.55.45-1,1-1s1,.45,1,1v9.063c.105,0,.206.005.311.005,8.474,0,15.343-1.975,15.343-4.412v-20.914l9.891-8.986c.47-.427.543-1.14.17-1.654Z"/> </svg>',
+}
+
 GA_FONTS = '''<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Expletus+Sans:wght@600&display=swap" rel="stylesheet">'''
@@ -177,11 +189,12 @@ def header(root=''):
   </div>
 </nav>'''
 
-def plank(text, small=False, alt=False, tag='h2', anchor=''):
+def plank(text, small=False, alt=False, tag='h2', anchor='', icon=None):
     cls = 'plank small' if small else 'plank'
     if alt: cls += ' alt'
     a = f' id="{anchor}"' if anchor else ''
-    return f'<div class="plank-wrap"{a}><div class="{cls}"><{tag}>{text}</{tag}></div></div>'
+    ic = f'<span class="plank-glyph">{GLYPHS[icon]}</span>' if icon else ''
+    return f'<div class="plank-wrap"{a}><div class="{cls}"><{tag}>{ic}{text}</{tag}></div></div>'
 
 def footer(root=''):
     return f'''
@@ -263,7 +276,7 @@ INDEX_BODY = f'''
   <div class="container">
     <div class="page-split split-tree">
       <div class="page-split-col split-major">
-        {plank('Residential &amp; Commercial Tree Services')}
+        {plank('Residential &amp; Commercial Tree Services', icon='tree')}
         <img class="split-photo-inline" src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
         <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
         <p>Our licensed and insured arborists have been doing tree work for decades, so there truly is no job too big to handle. Proper tree care is an investment that can lead to substantial returns &mdash; well-cared-for trees are attractive and add considerable value to your property, while poorly maintained trees can be a significant liability.</p>
@@ -282,7 +295,7 @@ INDEX_BODY = f'''
         <div class="video-embed">
           <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        {plank('From Your Tree to Your Table', small=True)}
+        {plank('From Your Tree to Your Table', small=True, icon='stump')}
         <div class="process">
           <div class="process-step">
             <img src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
@@ -320,13 +333,13 @@ INDEX_BODY = f'''
   <div class="container">
     <div class="page-split split-saw">
       <div class="page-split-col split-minor">
-        {plank('Firewood', small=True)}
+        {plank('Firewood', small=True, icon='firewood')}
         <img class="split-photo" src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy">
         <p>Seasoned hardwood firewood for sale in Nassau NY &mdash; stored clean and dry under our pavilion, sold by the face cord, and delivered across the Capital Region. Camp wood, kindling kegs, and smoker chunks too.</p>
         <p class="split-cta"><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
       </div>
       <div class="page-split-col split-major">
-        {plank('Sawmill Services &amp; Wood Products')}
+        {plank('Sawmill Services &amp; Wood Products', icon='wheelsaw')}
         <p>We mill custom lumber for bar tops, tables, counters, mantels, and much more &mdash; live-edge slabs up to 30&Prime; wide, air-dried under cover for up to two years. Milling on location with our portable band sawmill, or at the mill in Nassau. Slabs and finished pieces ship nationwide.</p>
         <p>Our shop southeast of Albany stocks live-edge walnut, cherry, maple, oak, and pine slabs for sale, plus specialty hardwoods like honey locust, sycamore, box elder, and catalpa &mdash; one-of-a-kind boards you won&rsquo;t find at a lumber yard.</p>
         <div class="service-tiles">
@@ -352,7 +365,7 @@ INDEX_BODY = f'''
     <div class="town-chips">
       <span>Albany</span><span>Chatham</span><span>Rensselaer</span><span>Columbia</span><span>Schenectady</span><span>East Greenbush</span><span>Troy</span><span>Cohoes</span><span>Latham</span><span>Colonie</span><span>Westmere</span><span>Delmar</span><span>Wynantskill</span><span>Westerlo</span><span>Rotterdam</span><span>New Lebanon</span><span>Ghent</span><span>Petersburg</span>
     </div>
-    <p class="nationwide-note">{SVG_TRUCK.replace('<svg ', '<svg style="width:20px;height:20px;vertical-align:-3px;margin-right:8px" ')} <strong>Custom lumber ships nationwide.</strong> For the right tree job we&rsquo;ll occasionally travel outside this area, too &mdash; <a href="{PHONE_TEL}">give us a call</a>.</p>
+    <p class="nationwide-note">{GLYPHS['truck'].replace('<svg ', '<svg style="width:22px;height:22px;vertical-align:-4px;margin-right:8px;fill:var(--green)" ')} <strong>Custom lumber ships nationwide.</strong> For the right tree job we&rsquo;ll occasionally travel outside this area, too &mdash; <a href="{PHONE_TEL}">give us a call</a>.</p>
   </div>
 </section>
 
@@ -362,7 +375,7 @@ INDEX_BODY = f'''
   </video>
   <div class="testimonial-shade"></div>
   <div class="container testimonial-inner">
-    {plank('What Neighbors Say')}
+    {plank('What Neighbors Say', icon='forest')}
     <div class="testimonials">
       <blockquote class="testimonial">
         I want to thank you again for your prompt and very professional response to our tree problem. I was home and was able to see the tree removal process and the clean-up as well. All of you are a real credit to your business. Neither my wife nor I will hesitate to call upon you again.
@@ -453,7 +466,7 @@ TREE_BODY = f'''
 
 <section class="section section-cream">
   <div class="container">
-    {plank('Tree Services')}
+    {plank('Tree Services', icon='chainsaw')}
     <div class="service-tiles">
       <div class="service-tile"><img src="../assets/img/tree-pruning.jpg" alt="Tree pruning" loading="lazy"><span>Tree Pruning</span></div>
       <div class="service-tile"><img src="../assets/img/land-clearing.jpg" alt="Land clearing" loading="lazy"><span>Land Clearing</span></div>
@@ -482,7 +495,7 @@ TREE_BODY = f'''
 
 <section class="section section-dark">
   <div class="container">
-    {plank("Don&rsquo;t Chip It &mdash; Keep It")}
+    {plank("Don&rsquo;t Chip It &mdash; Keep It", icon='stump')}
     <div class="split">
       <div class="split-img"><img src="../assets/img/milling-on-site.jpg" alt="Milling a removed tree on site" loading="lazy"></div>
       <div>
@@ -532,7 +545,7 @@ SLABS_BODY = f'''
 
 <section class="section section-cream">
   <div class="container">
-    {plank('Which Wood Is Right for You?')}
+    {plank('Which Wood Is Right for You?', icon='saw')}
     <div class="species-grid">
       {species_card('walnut', 'Walnut', 'finished-walnut-slab.jpg',
         '<p>A straight-grained hardwood ranging from chocolate brown to blond. A top pick for headboards, antique-style dining tables, and mantels &mdash; typically clear-coated or oiled to bring out its color.</p><p class="pros"><strong>Pros:</strong> Very strong and stable; takes intricate carving; beautiful color.</p><p class="cons"><strong>Cons:</strong> One of the more costly woods; color varies board to board.</p>')}
@@ -550,7 +563,7 @@ SLABS_BODY = f'''
 
 <section class="section section-dark">
   <div class="container">
-    {plank('Specialty Slabs', alt=True)}
+    {plank('Specialty Slabs', alt=True, icon='wheelsaw')}
     <p style="text-align:center;max-width:800px;margin:0 auto 34px">We start with carefully selected logs from upstate New York. Lumber is stored under cover as it slowly air dries for up to two years &mdash; besides good logs, proper drying is the most important step in quality control.</p>
     <div class="species-grid">
       {species_card('honey-locust', 'Honey Locust', None,
@@ -619,7 +632,7 @@ FIREWOOD_BODY = f'''
 
 <section class="section">
   <div class="container">
-    {plank('Firewood Prices')}
+    {plank('Firewood Prices', icon='firewood')}
     <div class="split">
       <div>
         <p>Seasoned mixed hardwoods, cut to stove lengths of 14&Prime; to 16&Prime; and stored under a pavilion so your wood stays clean and dry. Sold in face cord increments, priced for local delivery:</p>
@@ -669,7 +682,7 @@ ABOUT_BODY = f'''
 
 <section class="section section-cream">
   <div class="container">
-    {plank('Company History')}
+    {plank('Company History', icon='truck')}
     <p style="max-width:800px;margin:0 auto 26px;text-align:center">It started with <strong>Frank Daniels</strong>, Steven&rsquo;s father, running his log truck in 1981. Steven grew up in the trade &mdash; pictured in front of his own log truck in 1991, and quite the climber, going out on a limb in 1992.</p>
     <img src="../assets/img/history-pics.jpg" alt="Daniels family tree service history photos, 1981-1992" style="display:block;margin:0 auto" loading="lazy">
   </div>

@@ -308,6 +308,10 @@ header#header { position: relative; z-index: 99; }
 .plank-wrap::before { bottom: 7px; left: 7px; z-index: 1; }
 .plank-wrap::after { bottom: 7px; right: 7px; z-index: 1; }
 
+/* glyph icons inside plank headings — tinted like the engraved letters */
+.plank-glyph { display: inline-block; vertical-align: -2px; margin-right: 16px; }
+.plank-glyph svg { width: .92em; height: .92em; fill: #51301f; display: inline-block; vertical-align: middle; }
+
 .plank.small { padding: 10px 20px; }
 .plank.small h3 { font-size: 30px; letter-spacing: 4px; }
 
