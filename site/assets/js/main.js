@@ -51,6 +51,38 @@
     map.fitBounds(area.getBounds().pad(0.12));
   }
 
+  // ---------- Mobile drawer nav ----------
+  var burger = document.getElementById('hamburger');
+  var drawer = document.getElementById('mobile-drawer');
+  if (burger && drawer) {
+    var overlay = document.getElementById('drawer-overlay');
+    var closeBtn = document.getElementById('drawer-close');
+    var setDrawer = function (open) {
+      document.body.classList.toggle('drawer-open', open);
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+    burger.addEventListener('click', function () {
+      setDrawer(!document.body.classList.contains('drawer-open'));
+    });
+    if (overlay) overlay.addEventListener('click', function () { setDrawer(false); });
+    if (closeBtn) closeBtn.addEventListener('click', function () { setDrawer(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setDrawer(false);
+    });
+    [].forEach.call(drawer.querySelectorAll('a'), function (a) {
+      a.addEventListener('click', function () { setDrawer(false); });
+    });
+    [].forEach.call(drawer.querySelectorAll('.sub-toggle'), function (btn) {
+      btn.addEventListener('click', function () {
+        var li = btn.closest('.has-sub');
+        var open = li.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+  }
+
   // ---------- Contact form ----------
   var form = document.getElementById('estimate-form');
   if (form) {

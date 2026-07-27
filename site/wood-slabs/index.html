@@ -84,11 +84,67 @@
           </ul>
         </nav>
         <div id="capital-sawmill-logo"><a href="../"><img src="../assets/img/capital-sawmill-logo.png" width="144" height="80" alt="Capital Sawmill Service, LLC"></a></div>
+        <div class="mobile-actions">
+          <a id="mobile-call" href="tel:5184790729" aria-label="Call Capital Sawmill"><svg aria-hidden="true" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg></a>
+          <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
       <div class="clear-float"></div>
     </div>
   </div>
-</header><main>
+</header>
+
+<div id="drawer-overlay"></div>
+<nav id="mobile-drawer" aria-label="Mobile menu">
+  <div class="drawer-top">
+    <a href="../"><img src="../assets/img/capital-sawmill-logo.png" width="104" height="58" alt="Capital Sawmill"></a>
+    <button id="drawer-close" aria-label="Close menu">&times;</button>
+  </div>
+  <a class="drawer-estimate" href="../contact/">Get A Free Estimate!</a>
+  <ul class="drawer-nav">
+    <li><a href="../">Home</a></li>
+    <li><a href="../tree-removal/">Tree Removal</a></li>
+    <li class="has-sub">
+      <div class="drawer-row">
+        <a href="../wood-slabs/">Wood Slabs</a>
+        <button class="sub-toggle" aria-expanded="false" aria-label="Show wood slab species"><svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg></button>
+      </div>
+      <ul class="drawer-sub">
+        <li><a href="../wood-slabs/#walnut">Walnut</a></li>
+        <li><a href="../wood-slabs/#maple">Maple</a></li>
+        <li><a href="../wood-slabs/#oak">Oak</a></li>
+        <li><a href="../wood-slabs/#cherry">Cherry</a></li>
+        <li><a href="../wood-slabs/#pine">Pine</a></li>
+        <li><a href="../wood-slabs/#honey-locust">Honey Locust</a></li>
+        <li><a href="../wood-slabs/#sycamore">Sycamore</a></li>
+        <li><a href="../wood-slabs/#box-elder-maple">Box Elder Maple</a></li>
+        <li><a href="../wood-slabs/#catalpa">Catalpa</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <div class="drawer-row">
+        <a href="../wood-products/">Wood Products</a>
+        <button class="sub-toggle" aria-expanded="false" aria-label="Show wood products"><svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg></button>
+      </div>
+      <ul class="drawer-sub">
+        <li><a href="../wood-products/#bartops">Bar Tops</a></li>
+        <li><a href="../wood-products/#table-tops">Table Tops</a></li>
+        <li><a href="../wood-products/#mantels">Mantels</a></li>
+        <li><a href="../wood-products/#deer-plaques">Deer Plaque Mounts</a></li>
+        <li><a href="../wood-products/#chainsaw-signs">Chainsaw Signs</a></li>
+      </ul>
+    </li>
+    <li><a href="../firewood/">Firewood</a></li>
+    <li><a href="../about/">About Us</a></li>
+    <li><a href="../contact/">Contact</a></li>
+  </ul>
+  <div class="drawer-contact">
+    <a class="drawer-call" href="tel:5184790729"><svg aria-hidden="true" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg> (518) 479-0729</a>
+    <p>4119 US Highway 20, Nassau, NY 12123<br>Monday &ndash; Saturday &middot; 8AM &ndash; 6PM</p>
+  </div>
+</nav><main>
 <section class="page-banner" style="background-image:url(../assets/img/wood-slabs-on-forklift.jpg)">
   <h1>Custom Wood Slabs</h1>
   <p>One of a kind. Unfinished or finished, up to 30&Prime; wide &mdash; for whatever project you&rsquo;re working on.</p>

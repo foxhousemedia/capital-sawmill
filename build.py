@@ -16,6 +16,7 @@ SVG_CLOCK = '<svg aria-hidden="true" viewBox="0 0 512 512" fill="currentColor"><
 SVG_FB = '<svg aria-hidden="true" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>'
 SVG_IG = '<svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>'
 SVG_LI = '<svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>'
+SVG_CHEVRON = '<svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>'
 SVG_TRUCK = '<svg aria-hidden="true" viewBox="0 0 640 512" fill="currentColor"><path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"/></svg>'
 
 GA_FONTS = '''<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,11 +115,67 @@ def header(root=''):
           </ul>
         </nav>
         <div id="capital-sawmill-logo"><a href="{root}"><img src="{root}assets/img/capital-sawmill-logo.png" width="144" height="80" alt="Capital Sawmill Service, LLC"></a></div>
+        <div class="mobile-actions">
+          <a id="mobile-call" href="{PHONE_TEL}" aria-label="Call Capital Sawmill">{SVG_PHONE}</a>
+          <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
       <div class="clear-float"></div>
     </div>
   </div>
-</header>'''
+</header>
+
+<div id="drawer-overlay"></div>
+<nav id="mobile-drawer" aria-label="Mobile menu">
+  <div class="drawer-top">
+    <a href="{root}"><img src="{root}assets/img/capital-sawmill-logo.png" width="104" height="58" alt="Capital Sawmill"></a>
+    <button id="drawer-close" aria-label="Close menu">&times;</button>
+  </div>
+  <a class="drawer-estimate" href="{root}contact/">Get A Free Estimate!</a>
+  <ul class="drawer-nav">
+    <li><a href="{root}">Home</a></li>
+    <li><a href="{root}tree-removal/">Tree Removal</a></li>
+    <li class="has-sub">
+      <div class="drawer-row">
+        <a href="{root}wood-slabs/">Wood Slabs</a>
+        <button class="sub-toggle" aria-expanded="false" aria-label="Show wood slab species">{SVG_CHEVRON}</button>
+      </div>
+      <ul class="drawer-sub">
+        <li><a href="{root}wood-slabs/#walnut">Walnut</a></li>
+        <li><a href="{root}wood-slabs/#maple">Maple</a></li>
+        <li><a href="{root}wood-slabs/#oak">Oak</a></li>
+        <li><a href="{root}wood-slabs/#cherry">Cherry</a></li>
+        <li><a href="{root}wood-slabs/#pine">Pine</a></li>
+        <li><a href="{root}wood-slabs/#honey-locust">Honey Locust</a></li>
+        <li><a href="{root}wood-slabs/#sycamore">Sycamore</a></li>
+        <li><a href="{root}wood-slabs/#box-elder-maple">Box Elder Maple</a></li>
+        <li><a href="{root}wood-slabs/#catalpa">Catalpa</a></li>
+      </ul>
+    </li>
+    <li class="has-sub">
+      <div class="drawer-row">
+        <a href="{root}wood-products/">Wood Products</a>
+        <button class="sub-toggle" aria-expanded="false" aria-label="Show wood products">{SVG_CHEVRON}</button>
+      </div>
+      <ul class="drawer-sub">
+        <li><a href="{root}wood-products/#bartops">Bar Tops</a></li>
+        <li><a href="{root}wood-products/#table-tops">Table Tops</a></li>
+        <li><a href="{root}wood-products/#mantels">Mantels</a></li>
+        <li><a href="{root}wood-products/#deer-plaques">Deer Plaque Mounts</a></li>
+        <li><a href="{root}wood-products/#chainsaw-signs">Chainsaw Signs</a></li>
+      </ul>
+    </li>
+    <li><a href="{root}firewood/">Firewood</a></li>
+    <li><a href="{root}about/">About Us</a></li>
+    <li><a href="{root}contact/">Contact</a></li>
+  </ul>
+  <div class="drawer-contact">
+    <a class="drawer-call" href="{PHONE_TEL}">{SVG_PHONE} {PHONE_DISPLAY}</a>
+    <p>4119 US Highway 20, Nassau, NY 12123<br>Monday &ndash; Saturday &middot; 8AM &ndash; 6PM</p>
+  </div>
+</nav>'''
 
 def plank(text, small=False, alt=False, tag='h2', anchor=''):
     cls = 'plank small' if small else 'plank'

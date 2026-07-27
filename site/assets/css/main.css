@@ -757,6 +757,11 @@ header#header { position: relative; z-index: 99; }
 [data-parallax] { will-change: transform; }
 
 /* ============================================================
+   MOBILE NAV — hidden on desktop, activated ≤767px
+   ============================================================ */
+.mobile-actions, #hamburger, #mobile-drawer, #drawer-overlay { display: none; }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 991px) {
@@ -776,36 +781,198 @@ header#header { position: relative; z-index: 99; }
   body { padding-bottom: 58px; } /* room for sticky call bar */
   #sticky-call { display: block; }
 
-  /* mobile header: keep current-site spirit — centered logo, stacked info, green nav blocks */
-  #header { background: #333; }
-  #top-info { padding-top: 100px; }
-  #top-info .bar-inner { text-align: center; }
-  #top-info .bar-item { display: block; margin: 0 0 10px; }
-  #top-info a { display: block; padding: 12px; color: #333; background: #eee; font-size: 14px; }
-  #top-info #top-phone a { font-size: 17px; }
-  #top-info #estimate-modal-button { padding: 12px; border-radius: 0; background: var(--maroon); color: #fff; justify-content: center; height: auto; }
-  #top-info #estimate { padding: 0; }
-  #top-info .bar-inner { display: block; }
-  #top-info .bar-item { display: block; padding: 0; }
+  /* ---- MOBILE HEADER, rebuilt from scratch ----
+     Old stacked top-info bar + green tile nav are gone. In their place:
+     a compact sticky white bar (logo / tap-to-call / hamburger) and a
+     charred-wood slide-in drawer carrying the full menu + contact info. */
+  #top-info { display: none; }
+  #main-nav { display: none; }
 
-  #capital-sawmill-logo {
-    top: -252px;
-    left: 50%;
-    margin-left: -72px;
-    transform: none;
+  header#header { position: sticky; top: 0; z-index: 990; }
+  #main-menu { box-shadow: 0 2px 12px rgba(0,0,0,.22); }
+  #main-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+    min-height: 58px;
+  }
+  #capital-sawmill-logo { position: static; width: auto; height: auto; }
+  #capital-sawmill-logo img { width: 101px; height: 56px; display: block; }
+
+  .mobile-actions { display: flex; align-items: center; gap: 6px; }
+  #mobile-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,.3);
+  }
+  #mobile-call svg { width: 17px; height: 17px; }
+  #hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 48px; height: 48px;
+    padding: 0 10px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  #hamburger span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--green-dark);
+    transition: transform .3s, opacity .25s;
+  }
+  #hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  #hamburger.open span:nth-child(2) { opacity: 0; }
+  #hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* overlay */
+  #drawer-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    background: rgba(8,4,0,.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+  }
+  body.drawer-open #drawer-overlay { opacity: 1; pointer-events: auto; }
+  body.drawer-open { overflow: hidden; }
+
+  /* the drawer itself — charred wood, like the top bar & footer */
+  #mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    z-index: 1201;
+    width: min(84vw, 340px);
+    background: #221409 url(../tex/footer-bg.jpg);
+    box-shadow: -10px 0 30px rgba(0,0,0,.5);
+    padding: 16px 22px 24px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(103%);
+    transition: transform .32s cubic-bezier(.25,.8,.35,1);
+  }
+  body.drawer-open #mobile-drawer { transform: translateX(0); }
+
+  .drawer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .drawer-top img { display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,.6)); }
+  #drawer-close {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    width: 44px; height: 44px;
+    cursor: pointer;
+    text-shadow: 0 2px 3px #000;
   }
 
-  #main-nav ul { float: none; display: flex; flex-wrap: wrap; }
-  #main-nav ul li { width: 50%; text-align: center; padding: 8px; margin: 0; }
-  #main-nav ul li a, #main-nav ul li a:active, #main-nav ul li a:visited {
-    padding: 8px 5px; font-size: 14px; color: white; display: block;
+  .drawer-estimate {
+    display: block;
+    background: var(--maroon);
+    color: #fff !important;
+    text-align: center;
+    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    padding: 13px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    margin-bottom: 6px;
   }
-  #main-nav > ul > li:first-child { width: 100%; background: #f4f4f4; }
-  #main-nav > ul > li:first-child a { color: #111; font-size: 17px; }
-  #main-nav ul li:nth-child(even) { background: #1e5f00; }
-  #main-nav ul li:nth-child(odd) { background: #144e0d; }
-  #main-nav ul li div.sub-menu, #main-nav ul li:hover div.sub-menu { display: none; }
-  #main-nav ul li:last-child a { padding-right: 5px; }
+  .drawer-estimate:active { background: #5c001e; }
+
+  .drawer-nav { list-style: none; margin: 8px 0 0; padding: 0; }
+  .drawer-nav > li { border-bottom: 1px solid rgba(255,255,255,.13); }
+  .drawer-nav a {
+    display: block;
+    color: #fff;
+    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding: 14px 2px;
+    text-shadow: 0 2px 3px #000;
+  }
+  .drawer-row { display: flex; align-items: center; }
+  .drawer-row a { flex: 1; }
+  .sub-toggle {
+    background: none;
+    border: 0;
+    color: #fff;
+    width: 46px; height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .sub-toggle svg {
+    width: 14px; height: 14px;
+    filter: drop-shadow(0 2px 2px #000);
+    transition: transform .28s;
+  }
+  .has-sub.open .sub-toggle svg { transform: rotate(180deg); }
+  .drawer-sub {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 8px 16px;
+    display: none;
+  }
+  .has-sub.open .drawer-sub { display: block; }
+  .drawer-sub a {
+    font-size: 13.5px;
+    letter-spacing: 1.5px;
+    padding: 9px 2px;
+    color: #ddd3c4;
+  }
+
+  .drawer-contact { margin-top: auto; padding-top: 24px; text-align: center; }
+  .drawer-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: var(--green);
+    color: #fff !important;
+    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    padding: 13px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  }
+  .drawer-call svg { width: 16px; height: 16px; }
+  .drawer-contact p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #cfc6b8;
+    margin: 14px 0 0;
+    text-shadow: 0 2px 3px #000;
+  }
+
+  /* sticky header: keep anchor targets from hiding under the bar */
+  main [id], section[id] { scroll-margin-top: 78px; }
 
   .hero-badge { display: none; }
 
