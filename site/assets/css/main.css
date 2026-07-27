@@ -290,11 +290,13 @@ header#header { position: relative; z-index: 99; }
   -moz-background-clip: text;
   background-clip: text;
 }
-/* tiny very-dark-gray corner dots (tack heads) */
+/* tiny very-dark-gray corner dots (tack heads).
+   Top pair on .plank, bottom pair on .plank-wrap — NOT on the h2: its
+   drop-shadow filter makes it a containing block, which would drag
+   absolutely-positioned pseudos out of the plank corners. */
+.plank-wrap { position: relative; }
 .plank::before, .plank::after,
-.plank h2::before, .plank h2::after,
-.plank .h2::before, .plank .h2::after,
-.plank.small h3::before, .plank.small h3::after {
+.plank-wrap::before, .plank-wrap::after {
   content: "";
   position: absolute;
   width: 4px;
@@ -304,8 +306,8 @@ header#header { position: relative; z-index: 99; }
 }
 .plank::before { top: 7px; left: 7px; }
 .plank::after { top: 7px; right: 7px; }
-.plank h2::before, .plank .h2::before, .plank.small h3::before { bottom: 7px; left: 7px; }
-.plank h2::after, .plank .h2::after, .plank.small h3::after { bottom: 7px; right: 7px; }
+.plank-wrap::before { bottom: 7px; left: 7px; z-index: 1; }
+.plank-wrap::after { bottom: 7px; right: 7px; z-index: 1; }
 
 .plank.small { padding: 10px 20px; }
 .plank.small h3 { font-size: 30px; letter-spacing: 4px; }
