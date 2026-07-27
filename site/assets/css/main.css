@@ -576,28 +576,37 @@ header#header { position: relative; z-index: 99; }
 }
 
 /* ============================================================
-   TESTIMONIALS
+   TESTIMONIALS — blurred forest video stage, frosted quote cards
    ============================================================ */
-.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.testimonial-stage { position: relative; overflow: hidden; padding: 80px 0 74px; background: #101c0c; }
+.testimonial-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.testimonial-shade { position: absolute; inset: 0; background: rgba(7,14,4,.42); }
+.testimonial-inner { position: relative; z-index: 1; }
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .testimonial {
-  background:
-    linear-gradient(rgba(255,250,240,.9), rgba(250,240,225,.93)),
-    url(../tex/h2-bg.jpg);
-  background-size: auto, 600px;
-  padding: 26px 26px 20px;
+  margin: 0;
+  background: rgba(9,16,6,.55);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255,255,255,.18);
+  padding: 34px 28px 24px;
   position: relative;
   font-size: 15.5px;
-  line-height: 1.7;
-  color: #3c3226;
+  line-height: 1.75;
+  color: #eef3e8;
 }
 .testimonial::before {
   content: "\201C";
   font-family: Georgia, serif;
   font-size: 64px;
-  color: var(--green);
+  color: #b6e39a;
   position: absolute;
-  top: -6px; left: 14px;
-  opacity: .5;
+  top: -4px; left: 14px;
+  opacity: .55;
 }
 .testimonial cite {
   display: block;
@@ -606,9 +615,10 @@ header#header { position: relative; z-index: 99; }
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--green-dark);
+  color: #b6e39a;
   font-weight: 700;
 }
+.testimonial-cta { text-align: center; margin: 38px 0 0; }
 
 /* ============================================================
    FAQ
@@ -1027,6 +1037,7 @@ header#header { position: relative; z-index: 99; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
+  .testimonial-stage { padding: 56px 0 50px; }
   #service-map { height: 360px; }
   .map-overlay-title { top: 14px; }
   .map-overlay-title h2 { font-size: 15px; letter-spacing: 2px; padding: 9px 18px; }

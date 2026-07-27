@@ -356,8 +356,12 @@ INDEX_BODY = f'''
   </div>
 </section>
 
-<section class="section section-cream">
-  <div class="container">
+<section class="testimonial-stage" id="testimonials">
+  <video class="testimonial-bg" autoplay muted loop playsinline preload="metadata" poster="assets/img/testimonials-poster.jpg" aria-hidden="true">
+    <source src="assets/vid/testimonials-bg.mp4" type="video/mp4">
+  </video>
+  <div class="testimonial-shade"></div>
+  <div class="container testimonial-inner">
     {plank('What Neighbors Say')}
     <div class="testimonials">
       <blockquote class="testimonial">
@@ -373,6 +377,7 @@ INDEX_BODY = f'''
         <cite>Billy Lauritsen</cite>
       </blockquote>
     </div>
+    <p class="testimonial-cta"><a class="btn btn-call" href="https://www.google.com/maps/place/Capital+Sawmill+Service,+Tree+Service+%26+More/data=!4m2!3m1!1s0x0:0xd58ee223ea17ec14?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">Read More Reviews on Google</a></p>
   </div>
 </section>
 
