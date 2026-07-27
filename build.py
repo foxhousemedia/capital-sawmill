@@ -267,7 +267,7 @@ INDEX_BODY = f'''
         <img class="split-photo-inline" src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
         <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
         <p>Our licensed and insured arborists have been doing tree work for decades, so there truly is no job too big to handle. Proper tree care is an investment that can lead to substantial returns &mdash; well-cared-for trees are attractive and add considerable value to your property, while poorly maintained trees can be a significant liability.</p>
-        <p>Pruning or removing trees, especially large ones, is dangerous work that should be done only by those trained and equipped to work safely in trees. Call now for a free consultation and make us your tree service!</p>
+        <p>Pruning or removing trees, especially large ones, is dangerous work that should be done only by those trained and equipped to work safely in trees. From emergency storm-damage cleanup to routine tree trimming, we serve homeowners and businesses across Albany, Rensselaer, and Columbia counties &mdash; East Greenbush, Troy, Schenectady, Chatham, Nassau, and the rest of the Capital Region. Call now for a free consultation and make us your tree service!</p>
         <div class="service-tiles">
           <a class="service-tile" href="tree-removal/"><img src="assets/img/100_0254-1.jpg" alt="Bucket truck tree removal" loading="lazy"><span>Tree Removal</span></a>
           <a class="service-tile" href="tree-removal/"><img src="assets/img/tree-pruning.jpg" alt="Tree pruning" loading="lazy"><span>Tree Pruning</span></a>
@@ -322,12 +322,13 @@ INDEX_BODY = f'''
       <div class="page-split-col split-minor">
         {plank('Firewood', small=True)}
         <img class="split-photo" src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy">
-        <p>Quality seasoned mixed hardwoods, stored clean and dry under our pavilion, sold by the face cord &mdash; dumped at your place. Camp wood, kindling kegs, and smoker chunks too.</p>
+        <p>Seasoned hardwood firewood for sale in Nassau NY &mdash; stored clean and dry under our pavilion, sold by the face cord, and delivered across the Capital Region. Camp wood, kindling kegs, and smoker chunks too.</p>
         <p class="split-cta"><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
       </div>
       <div class="page-split-col split-major">
         {plank('Sawmill Services &amp; Wood Products')}
         <p>We mill custom lumber for bar tops, tables, counters, mantels, and much more &mdash; live-edge slabs up to 30&Prime; wide, air-dried under cover for up to two years. Milling on location with our portable band sawmill, or at the mill in Nassau. Slabs and finished pieces ship nationwide.</p>
+        <p>Our shop southeast of Albany stocks live-edge walnut, cherry, maple, oak, and pine slabs for sale, plus specialty hardwoods like honey locust, sycamore, box elder, and catalpa &mdash; one-of-a-kind boards you won&rsquo;t find at a lumber yard.</p>
         <div class="service-tiles">
           <a class="service-tile" href="wood-slabs/"><img src="assets/img/milling-on-site.jpg" alt="Milling on site" loading="lazy"><span>Custom Milling</span></a>
           <a class="service-tile" href="wood-slabs/"><img src="assets/img/wood-slabs-on-forklift.jpg" alt="Live-edge wood slabs" loading="lazy"><span>Live-Edge Slabs</span></a>
