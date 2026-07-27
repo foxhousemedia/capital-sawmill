@@ -264,10 +264,12 @@ INDEX_BODY = f'''
     <div class="page-split split-tree">
       <div class="page-split-col split-major">
         {plank('Residential &amp; Commercial Tree Services')}
-        <img class="split-photo-inline" src="assets/img/100_0254-1.jpg" alt="Capital Sawmill bucket truck taking down a spruce" loading="lazy">
+        <img class="split-photo-inline" src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
         <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
+        <p>Our licensed and insured arborists have been doing tree work for decades, so there truly is no job too big to handle. Proper tree care is an investment that can lead to substantial returns &mdash; well-cared-for trees are attractive and add considerable value to your property, while poorly maintained trees can be a significant liability.</p>
+        <p>Pruning or removing trees, especially large ones, is dangerous work that should be done only by those trained and equipped to work safely in trees. Call now for a free consultation and make us your tree service!</p>
         <div class="service-tiles">
-          <a class="service-tile" href="tree-removal/"><img src="assets/img/07-14-009.jpg" alt="Tree removal" loading="lazy"><span>Tree Removal</span></a>
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/100_0254-1.jpg" alt="Bucket truck tree removal" loading="lazy"><span>Tree Removal</span></a>
           <a class="service-tile" href="tree-removal/"><img src="assets/img/tree-pruning.jpg" alt="Tree pruning" loading="lazy"><span>Tree Pruning</span></a>
           <a class="service-tile" href="tree-removal/"><img src="assets/img/land-clearing.jpg" alt="Land clearing" loading="lazy"><span>Land Clearing</span></a>
           <a class="service-tile" href="tree-removal/"><img src="assets/img/stump-grinding.jpg" alt="Stump grinding" loading="lazy"><span>Stump Grinding</span></a>
