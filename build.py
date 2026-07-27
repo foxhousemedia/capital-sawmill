@@ -259,27 +259,36 @@ INDEX_BODY = f'''
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-cream" id="two-trades">
   <div class="container">
-    <div class="trades">
-      <a class="trade-card" href="tree-removal/">
-        <div class="trade-bg" style="background-image:url(assets/img/07-14-009.jpg)"></div>
-        <div class="trade-body">
-          <h3>Tree Services</h3>
-          <p>Removal, pruning, stump grinding, land clearing &mdash; 30+ years of taking down trees of any size, safely, and leaving the place looking great.</p>
-          <span class="btn btn-call">Explore Tree Services</span>
+    <div class="page-split">
+      <div class="page-split-col">
+        {plank('Residential &amp; Commercial Tree Services')}
+        <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
+        <div class="service-tiles">
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/07-14-009.jpg" alt="Tree removal" loading="lazy"><span>Tree Removal</span></a>
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/tree-pruning.jpg" alt="Tree pruning" loading="lazy"><span>Tree Pruning</span></a>
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/land-clearing.jpg" alt="Land clearing" loading="lazy"><span>Land Clearing</span></a>
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/stump-grinding.jpg" alt="Stump grinding" loading="lazy"><span>Stump Grinding</span></a>
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/wood-chipping.jpg" alt="Wood chipping" loading="lazy"><span>Wood Chipping</span></a>
+          <a class="service-tile" href="tree-removal/"><img src="assets/img/debris-removal.jpg" alt="Debris removal" loading="lazy"><span>Debris Removal</span></a>
         </div>
-      </a>
-      <a class="trade-card" href="wood-slabs/">
-        <div class="trade-bg" style="background-image:url(assets/img/wood-slabs-on-forklift.jpg)"></div>
-        <div class="trade-body">
-          <h3>Sawmill Services</h3>
-          <p>Custom lumber, live-edge slabs up to 30&Prime; wide, on-site milling with our portable mill &mdash; and nationwide shipping on slabs and logs.</p>
-          <span class="btn btn-maroon">Explore the Sawmill</span>
+        <p class="split-cta"><a class="btn btn-call" href="{PHONE_TEL}">{SVG_PHONE} Call {PHONE_DISPLAY}</a> <a class="btn btn-light" href="tree-removal/">Explore Tree Services</a></p>
+      </div>
+      <div class="page-split-col">
+        {plank('Sawmill Services &amp; Wood Products')}
+        <p>We mill custom lumber for bar tops, tables, counters, mantels, and much more &mdash; live-edge slabs up to 30&Prime; wide, air-dried under cover for up to two years. Milling on location with our portable band sawmill, or at the mill in Nassau. Slabs and finished pieces ship nationwide.</p>
+        <div class="service-tiles">
+          <a class="service-tile" href="wood-slabs/"><img src="assets/img/milling-on-site.jpg" alt="Milling on site" loading="lazy"><span>Custom Milling</span></a>
+          <a class="service-tile" href="wood-slabs/"><img src="assets/img/wood-slabs-on-forklift.jpg" alt="Live-edge wood slabs" loading="lazy"><span>Live-Edge Slabs</span></a>
+          <a class="service-tile" href="wood-products/#bartops"><img src="assets/img/wp-bartops.jpg" alt="Bar tops" loading="lazy"><span>Bar Tops</span></a>
+          <a class="service-tile" href="wood-products/#table-tops"><img src="assets/img/wp-table-tops.jpg" alt="Table tops" loading="lazy"><span>Table Tops</span></a>
+          <a class="service-tile" href="wood-products/#mantels"><img src="assets/img/wp-mantels.jpg" alt="Fireplace mantels" loading="lazy"><span>Mantels</span></a>
+          <a class="service-tile" href="wood-products/#deer-plaques"><img src="assets/img/wp-dpm.jpg" alt="Deer plaque mounts" loading="lazy"><span>Deer Plaques</span></a>
         </div>
-      </a>
+        <p class="split-cta"><a class="btn btn-maroon" href="wood-slabs/">Buy Wood Slabs</a> <a class="btn btn-call" href="wood-products/">Browse Wood Products</a></p>
+      </div>
     </div>
-    <p class="bridge"><strong>Here&rsquo;s what makes us different:</strong> most tree services haul your tree to the chipper. We can haul it to the mill &mdash; and hand it back to you as a bartop, mantel, or heirloom table. One call does both jobs.</p>
   </div>
 </section>
 
@@ -327,34 +336,9 @@ INDEX_BODY = f'''
   </div>
 </section>
 
-<section class="section section-cream">
-  <div class="container">
-    {plank('Wood Slabs &amp; Milling')}
-    <div class="split">
-      <div class="split-img"><img src="assets/img/IMG_0446.jpg" alt="Live-edge wood slabs" loading="lazy" data-parallax="0.05"></div>
-      <div>
-        <p>We create custom lumber used for a variety of applications including bar tops, tables, counters, mantels, and much more. We carry a variety of locally sourced wood and offer both wholesale and finished products &mdash; slabs up to 30&Prime; wide, air-dried under cover for up to two years.</p>
-        <p><a class="btn btn-maroon" href="wood-slabs/">Buy Wood Slabs</a> &nbsp; <a class="btn btn-call" href="wood-products/">Browse Wood Products</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <div class="grain-divider"></div>
 
-<section class="section section-forest">
-  <div class="container">
-    {plank('Residential &amp; Commercial Tree Services', alt=True)}
-    <p style="max-width:860px;margin:0 auto 34px;text-align:center">With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great. Call now for a free consultation and we&rsquo;ll quickly show you why we&rsquo;re the Albany area&rsquo;s favorite tree &amp; sawmill company.</p>
-    <div class="service-tiles">
-      <a class="service-tile" href="tree-removal/"><img src="assets/img/tree-pruning.jpg" alt="Tree pruning" loading="lazy"><span>Tree Pruning</span></a>
-      <a class="service-tile" href="tree-removal/"><img src="assets/img/land-clearing.jpg" alt="Land clearing" loading="lazy"><span>Land Clearing</span></a>
-      <a class="service-tile" href="tree-removal/"><img src="assets/img/stump-grinding.jpg" alt="Stump grinding" loading="lazy"><span>Stump Grinding</span></a>
-      <a class="service-tile" href="tree-removal/"><img src="assets/img/milling-on-site.jpg" alt="Milling on site" loading="lazy"><span>Milling on Site</span></a>
-      <a class="service-tile" href="tree-removal/"><img src="assets/img/wood-chipping.jpg" alt="Wood chipping" loading="lazy"><span>Wood Chipping</span></a>
-      <a class="service-tile" href="tree-removal/"><img src="assets/img/debris-removal.jpg" alt="Debris removal" loading="lazy"><span>Debris Removal</span></a>
-    </div>
-    {call_cta()}
+{call_cta()}
   </div>
 </section>
 
