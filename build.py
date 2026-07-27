@@ -694,7 +694,7 @@ ABOUT_BODY = f'''
   <div class="container">
     {plank('Company History')}
     <p style="max-width:800px;margin:0 auto 26px;text-align:center">It started with <strong>Frank Daniels</strong>, Steven&rsquo;s father, running his log truck in 1981. Steven grew up in the trade &mdash; pictured in front of his own log truck in 1991, and quite the climber, going out on a limb in 1992.</p>
-    <img src="../assets/img/history-pics.jpg" alt="Daniels family tree service history photos, 1981-1992" style="display:block;margin:0 auto;border-radius:6px;box-shadow:0 10px 26px rgba(0,0,0,.35)" loading="lazy">
+    <img src="../assets/img/history-pics.jpg" alt="Daniels family tree service history photos, 1981-1992" style="display:block;margin:0 auto;border-radius:6px" loading="lazy">
   </div>
 </section>
 '''

@@ -41,7 +41,7 @@
 
     var logoIcon = L.divIcon({
       className: 'hq-pin',
-      html: '<div style="background:#780027;border:3px solid #fff;width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 3px 8px rgba(0,0,0,.5)"></div>',
+      html: '<div style="background:#780027;border:3px solid #fff;width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg)"></div>',
       iconSize: [22, 22],
       iconAnchor: [11, 22]
     });
