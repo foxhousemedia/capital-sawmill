@@ -189,12 +189,16 @@ def header(root=''):
   </div>
 </nav>'''
 
-def plank(text, small=False, alt=False, tag='h2', anchor='', icon=None):
+def plank(text, small=False, alt=False, tag='h2', anchor='', icon=None, icon_after=False):
     cls = 'plank small' if small else 'plank'
     if alt: cls += ' alt'
     a = f' id="{anchor}"' if anchor else ''
-    ic = f'<span class="plank-glyph">{GLYPHS[icon]}</span>' if icon else ''
-    return f'<div class="plank-wrap"{a}><div class="{cls}"><{tag}>{ic}{text}</{tag}></div></div>'
+    before, after = '', ''
+    if icon and icon_after:
+        after = f'<span class="plank-glyph after">{GLYPHS[icon]}</span>'
+    elif icon:
+        before = f'<span class="plank-glyph">{GLYPHS[icon]}</span>'
+    return f'<div class="plank-wrap"{a}><div class="{cls}"><{tag}>{before}{text}{after}</{tag}></div></div>'
 
 def footer(root=''):
     return f'''
@@ -276,7 +280,7 @@ INDEX_BODY = f'''
   <div class="container">
     <div class="page-split split-tree">
       <div class="page-split-col split-major">
-        {plank('Residential &amp; Commercial Tree Services', icon='tree')}
+        {plank('Residential &amp; Commercial Tree Services')}
         <img class="split-photo-inline" src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
         <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
         <p>Our licensed and insured arborists have been doing tree work for decades, so there truly is no job too big to handle. Proper tree care is an investment that can lead to substantial returns &mdash; well-cared-for trees are attractive and add considerable value to your property, while poorly maintained trees can be a significant liability.</p>
@@ -295,13 +299,13 @@ INDEX_BODY = f'''
         <div class="video-embed">
           <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        {plank('From Your Tree to Your Table', small=True, icon='stump')}
+        {plank('From Your Tree to Your Table', small=True)}
         <div class="process">
           <div class="process-step">
             <img src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
             <div class="step-body">
               <span class="step-num">1</span>
-              <h4>We Take It Down</h4>
+              <h4>We Take It Down <span class="step-glyph">{GLYPHS['chainsaw']}</span></h4>
               <p>Licensed, insured, and equipped for trees of any size &mdash; problematic or just in the way.</p>
             </div>
           </div>
@@ -309,7 +313,7 @@ INDEX_BODY = f'''
             <img src="assets/img/milling-on-site.jpg" alt="Milling a log on site" loading="lazy">
             <div class="step-body">
               <span class="step-num">2</span>
-              <h4>We Mill It</h4>
+              <h4>We Mill It <span class="step-glyph">{GLYPHS['wheelsaw']}</span></h4>
               <p>On location with our portable band sawmill, or on the stationary mill at our shop in Nassau.</p>
             </div>
           </div>
@@ -317,7 +321,7 @@ INDEX_BODY = f'''
             <img src="assets/img/finished-walnut-slab.jpg" alt="Finished walnut slab" loading="lazy">
             <div class="step-body">
               <span class="step-num">3</span>
-              <h4>You Keep It</h4>
+              <h4>You Keep It <span class="step-glyph">{GLYPHS['saw']}</span></h4>
               <p>Your tree comes back as slabs, beams, or a finished piece &mdash; lumber with a story you already know.</p>
             </div>
           </div>
@@ -333,13 +337,13 @@ INDEX_BODY = f'''
   <div class="container">
     <div class="page-split split-saw">
       <div class="page-split-col split-minor">
-        {plank('Firewood', small=True, icon='firewood')}
+        {plank('Firewood', small=True, icon='firewood', icon_after=True)}
         <img class="split-photo" src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy">
         <p>Seasoned hardwood firewood for sale in Nassau NY &mdash; stored clean and dry under our pavilion, sold by the face cord, and delivered across the Capital Region. Camp wood, kindling kegs, and smoker chunks too.</p>
         <p class="split-cta"><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
       </div>
       <div class="page-split-col split-major">
-        {plank('Sawmill Services &amp; Wood Products', icon='wheelsaw')}
+        {plank('Sawmill Services &amp; Wood Products')}
         <p>We mill custom lumber for bar tops, tables, counters, mantels, and much more &mdash; live-edge slabs up to 30&Prime; wide, air-dried under cover for up to two years. Milling on location with our portable band sawmill, or at the mill in Nassau. Slabs and finished pieces ship nationwide.</p>
         <p>Our shop southeast of Albany stocks live-edge walnut, cherry, maple, oak, and pine slabs for sale, plus specialty hardwoods like honey locust, sycamore, box elder, and catalpa &mdash; one-of-a-kind boards you won&rsquo;t find at a lumber yard.</p>
         <div class="service-tiles">
@@ -375,7 +379,7 @@ INDEX_BODY = f'''
   </video>
   <div class="testimonial-shade"></div>
   <div class="container testimonial-inner">
-    {plank('What Neighbors Say', icon='forest')}
+    {plank('What Neighbors Say')}
     <div class="testimonials">
       <blockquote class="testimonial">
         I want to thank you again for your prompt and very professional response to our tree problem. I was home and was able to see the tree removal process and the clean-up as well. All of you are a real credit to your business. Neither my wife nor I will hesitate to call upon you again.
@@ -466,7 +470,7 @@ TREE_BODY = f'''
 
 <section class="section section-cream">
   <div class="container">
-    {plank('Tree Services', icon='chainsaw')}
+    {plank('Tree Services')}
     <div class="service-tiles">
       <div class="service-tile"><img src="../assets/img/tree-pruning.jpg" alt="Tree pruning" loading="lazy"><span>Tree Pruning</span></div>
       <div class="service-tile"><img src="../assets/img/land-clearing.jpg" alt="Land clearing" loading="lazy"><span>Land Clearing</span></div>
@@ -495,7 +499,7 @@ TREE_BODY = f'''
 
 <section class="section section-dark">
   <div class="container">
-    {plank("Don&rsquo;t Chip It &mdash; Keep It", icon='stump')}
+    {plank("Don&rsquo;t Chip It &mdash; Keep It")}
     <div class="split">
       <div class="split-img"><img src="../assets/img/milling-on-site.jpg" alt="Milling a removed tree on site" loading="lazy"></div>
       <div>
@@ -545,7 +549,7 @@ SLABS_BODY = f'''
 
 <section class="section section-cream">
   <div class="container">
-    {plank('Which Wood Is Right for You?', icon='saw')}
+    {plank('Which Wood Is Right for You?')}
     <div class="species-grid">
       {species_card('walnut', 'Walnut', 'finished-walnut-slab.jpg',
         '<p>A straight-grained hardwood ranging from chocolate brown to blond. A top pick for headboards, antique-style dining tables, and mantels &mdash; typically clear-coated or oiled to bring out its color.</p><p class="pros"><strong>Pros:</strong> Very strong and stable; takes intricate carving; beautiful color.</p><p class="cons"><strong>Cons:</strong> One of the more costly woods; color varies board to board.</p>')}
@@ -563,7 +567,7 @@ SLABS_BODY = f'''
 
 <section class="section section-dark">
   <div class="container">
-    {plank('Specialty Slabs', alt=True, icon='wheelsaw')}
+    {plank('Specialty Slabs', alt=True)}
     <p style="text-align:center;max-width:800px;margin:0 auto 34px">We start with carefully selected logs from upstate New York. Lumber is stored under cover as it slowly air dries for up to two years &mdash; besides good logs, proper drying is the most important step in quality control.</p>
     <div class="species-grid">
       {species_card('honey-locust', 'Honey Locust', None,
@@ -632,7 +636,7 @@ FIREWOOD_BODY = f'''
 
 <section class="section">
   <div class="container">
-    {plank('Firewood Prices', icon='firewood')}
+    {plank('Firewood Prices')}
     <div class="split">
       <div>
         <p>Seasoned mixed hardwoods, cut to stove lengths of 14&Prime; to 16&Prime; and stored under a pavilion so your wood stays clean and dry. Sold in face cord increments, priced for local delivery:</p>
@@ -682,7 +686,7 @@ ABOUT_BODY = f'''
 
 <section class="section section-cream">
   <div class="container">
-    {plank('Company History', icon='truck')}
+    {plank('Company History')}
     <p style="max-width:800px;margin:0 auto 26px;text-align:center">It started with <strong>Frank Daniels</strong>, Steven&rsquo;s father, running his log truck in 1981. Steven grew up in the trade &mdash; pictured in front of his own log truck in 1991, and quite the climber, going out on a limb in 1992.</p>
     <img src="../assets/img/history-pics.jpg" alt="Daniels family tree service history photos, 1981-1992" style="display:block;margin:0 auto" loading="lazy">
   </div>
