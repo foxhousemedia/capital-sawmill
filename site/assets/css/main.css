@@ -505,14 +505,35 @@ header#header { position: relative; z-index: 99; }
 /* ============================================================
    SERVICE AREA MAP
    ============================================================ */
-.map-frame {
-  border: 14px solid transparent;
-  border-image: url(../tex/h2-bg.jpg) 30 round;
-  border-radius: 4px;
-  box-shadow: 0 14px 34px rgba(0,0,0,.5);
-  background: #dfe8dc;
+/* full-bleed map section — no frame, no shadow */
+.section-map-full { padding: 0 0 52px; background: #fff; }
+.map-full-wrap { position: relative; }
+#service-map { height: 540px; width: 100%; display: block; z-index: 1; background: #e8eae7; }
+/* gray out the base map; the green service circle (SVG overlay pane) keeps its color */
+#service-map .leaflet-tile-pane { filter: grayscale(1) brightness(1.04) contrast(.96); }
+.map-overlay-title {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  pointer-events: none;
+  white-space: nowrap;
 }
-#service-map { height: 440px; width: 100%; display: block; z-index: 1; }
+.map-overlay-title h2 {
+  margin: 0;
+  background: rgba(255,255,255,.93);
+  color: var(--green-dark);
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 23px;
+  padding: 12px 30px;
+  border-radius: 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.map-below { margin-top: 30px; }
 .town-chips { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin-top: 26px; }
 .town-chips span {
   background: #f4f1ea;
@@ -987,5 +1008,7 @@ header#header { position: relative; z-index: 99; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
-  #service-map { height: 320px; }
+  #service-map { height: 360px; }
+  .map-overlay-title { top: 14px; }
+  .map-overlay-title h2 { font-size: 15px; letter-spacing: 2px; padding: 9px 18px; }
 }

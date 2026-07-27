@@ -372,10 +372,12 @@ INDEX_BODY = f'''
   </div>
 </section>
 
-<section class="section section-dark" id="service-area-section">
-  <div class="container">
-    {plank('Areas We Service', alt=True)}
-    <div class="map-frame"><div id="service-map"></div></div>
+<section class="section-map-full" id="service-area-section">
+  <div class="map-full-wrap">
+    <div id="service-map"></div>
+    <div class="map-overlay-title"><h2>Areas We Service</h2></div>
+  </div>
+  <div class="container map-below">
     <div class="town-chips">
       <span>Albany</span><span>Chatham</span><span>Rensselaer</span><span>Columbia</span><span>Schenectady</span><span>East Greenbush</span><span>Troy</span><span>Cohoes</span><span>Latham</span><span>Colonie</span><span>Westmere</span><span>Delmar</span><span>Wynantskill</span><span>Westerlo</span><span>Rotterdam</span><span>New Lebanon</span><span>Ghent</span><span>Petersburg</span>
     </div>
