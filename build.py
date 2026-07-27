@@ -259,9 +259,8 @@ INDEX_BODY = f'''
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-cream trades-overlap">
   <div class="container">
-    {plank('One Crew. Two Trades.')}
     <div class="trades">
       <a class="trade-card" href="tree-removal/">
         <div class="trade-bg" data-parallax="0.06" style="background-image:url(assets/img/07-14-009.jpg)"></div>

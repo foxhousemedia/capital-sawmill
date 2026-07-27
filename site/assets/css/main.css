@@ -357,6 +357,10 @@ header#header { position: relative; z-index: 99; }
 /* ============================================================
    TWO TRADES SPLIT
    ============================================================ */
+/* trades cards pull up over the hero video */
+.trades-overlap { padding-top: 0; }
+.trades-overlap .trades { position: relative; z-index: 5; margin-top: -50px; }
+
 .trades {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1005,6 +1009,8 @@ header#header { position: relative; z-index: 99; }
   .hero-sub { display: none; }
 
   .process, .testimonials, .service-tiles, .species-grid, .footer-grid { grid-template-columns: 1fr; }
+  /* no hero overlap on mobile — the hero copy sits below the video there */
+  .trades-overlap .trades { margin-top: 0; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
