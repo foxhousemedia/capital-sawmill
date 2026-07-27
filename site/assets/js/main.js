@@ -48,8 +48,7 @@
     L.marker(hq, { icon: logoIcon }).addTo(map)
       .bindPopup('<b>Capital Sawmill Service, LLC</b><br>4119 US Highway 20, Nassau, NY<br><a href="tel:5184790729">(518) 479-0729</a>');
 
-    // fit the service circle, then zoom in one level (full-bleed section can afford it)
-    map.setView(hq, map.getBoundsZoom(area.getBounds().pad(0.12)) + 1);
+    map.setView(hq, map.getBoundsZoom(area.getBounds().pad(0.12)));
   }
 
   // ---------- Mobile drawer nav ----------
