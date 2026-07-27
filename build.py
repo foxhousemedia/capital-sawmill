@@ -261,8 +261,8 @@ INDEX_BODY = f'''
 
 <section class="section section-cream" id="two-trades">
   <div class="container">
-    <div class="page-split">
-      <div class="page-split-col">
+    <div class="page-split split-tree">
+      <div class="page-split-col split-major">
         {plank('Residential &amp; Commercial Tree Services')}
         <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
         <div class="service-tiles">
@@ -275,7 +275,54 @@ INDEX_BODY = f'''
         </div>
         <p class="split-cta"><a class="btn btn-call" href="{PHONE_TEL}">{SVG_PHONE} Call {PHONE_DISPLAY}</a> <a class="btn btn-light" href="tree-removal/">Explore Tree Services</a></p>
       </div>
-      <div class="page-split-col">
+      <div class="page-split-col split-minor">
+        <div class="video-embed">
+          <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        {plank('From Your Tree to Your Table', small=True)}
+        <div class="process">
+          <div class="process-step">
+            <img src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
+            <div class="step-body">
+              <span class="step-num">1</span>
+              <h4>We Take It Down</h4>
+              <p>Licensed, insured, and equipped for trees of any size &mdash; problematic or just in the way.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <img src="assets/img/milling-on-site.jpg" alt="Milling a log on site" loading="lazy">
+            <div class="step-body">
+              <span class="step-num">2</span>
+              <h4>We Mill It</h4>
+              <p>On location with our portable band sawmill, or on the stationary mill at our shop in Nassau.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <img src="assets/img/finished-walnut-slab.jpg" alt="Finished walnut slab" loading="lazy">
+            <div class="step-body">
+              <span class="step-num">3</span>
+              <h4>You Keep It</h4>
+              <p>Your tree comes back as slabs, beams, or a finished piece &mdash; lumber with a story you already know.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grain-divider"></div>
+
+<section class="section section-cream" id="sawmill-products">
+  <div class="container">
+    <div class="page-split split-saw">
+      <div class="page-split-col split-minor">
+        {plank('Firewood', small=True)}
+        <img class="split-photo" src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy">
+        <p>Quality seasoned mixed hardwoods, stored clean and dry under our pavilion, sold by the face cord &mdash; dumped at your place. Camp wood, kindling kegs, and smoker chunks too.</p>
+        <p class="split-cta"><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
+      </div>
+      <div class="page-split-col split-major">
         {plank('Sawmill Services &amp; Wood Products')}
         <p>We mill custom lumber for bar tops, tables, counters, mantels, and much more &mdash; live-edge slabs up to 30&Prime; wide, air-dried under cover for up to two years. Milling on location with our portable band sawmill, or at the mill in Nassau. Slabs and finished pieces ship nationwide.</p>
         <div class="service-tiles">
@@ -288,69 +335,6 @@ INDEX_BODY = f'''
         </div>
         <p class="split-cta"><a class="btn btn-maroon" href="wood-slabs/">Buy Wood Slabs</a> <a class="btn btn-call" href="wood-products/">Browse Wood Products</a></p>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="grain-divider"></div>
-
-<section class="section section-dark">
-  <div class="container">
-    {plank('From Your Tree to Your Table', alt=True)}
-    <div class="process">
-      <div class="process-step">
-        <img src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
-        <div class="step-body">
-          <span class="step-num">1</span>
-          <h4>We Take It Down</h4>
-          <p>Licensed, insured, and equipped for trees of any size &mdash; problematic or just in the way.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <img src="assets/img/milling-on-site.jpg" alt="Milling a log on site" loading="lazy">
-        <div class="step-body">
-          <span class="step-num">2</span>
-          <h4>We Mill It</h4>
-          <p>On location with our portable band sawmill, or on the big stationary mill at our shop in Nassau.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <img src="assets/img/finished-walnut-slab.jpg" alt="Finished walnut slab" loading="lazy">
-        <div class="step-body">
-          <span class="step-num">3</span>
-          <h4>You Keep It</h4>
-          <p>Your tree comes back as slabs, beams, or a finished piece &mdash; lumber with a story you already know.</p>
-        </div>
-      </div>
-    </div>
-    <div class="split" style="margin-top:56px">
-      <div>
-        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:3px;color:var(--green-dark);font-size:24px">Watch How It&rsquo;s Done</h3>
-        <p>Whether you have a tree that you want turned into lumber or you&rsquo;re looking for that perfect slab of wood for your next project, Capital Sawmill has you covered. We can mill on location or even ship slabs all across the United States. Our friendly staff makes getting the right slab of wood a hassle-free process that won&rsquo;t break the bank.</p>
-        <a class="btn btn-call" href="{PHONE_TEL}">{SVG_PHONE} Talk It Through With Steve</a>
-      </div>
-      <div class="video-embed">
-        <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="grain-divider"></div>
-
-{call_cta()}
-  </div>
-</section>
-
-<section class="section section-cream">
-  <div class="container">
-    {plank('Firewood')}
-    <div class="split">
-      <div>
-        <p>Feed your wood-stove during those cold New York winter nights. Quality seasoned mixed hardwoods, stored clean and dry under our pavilion, available by the face cord &mdash; dumped at your place. Camp wood, kindling kegs, and smoker chunks available too.</p>
-        <p><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
-      </div>
-      <div class="split-img"><img src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy" data-parallax="0.05"></div>
     </div>
   </div>
 </section>

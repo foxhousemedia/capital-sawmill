@@ -372,11 +372,23 @@ header#header { position: relative; z-index: 99; }
   gap: 52px;
   align-items: start;
 }
+.page-split.split-tree { grid-template-columns: 2fr 1fr; }
+.page-split.split-saw { grid-template-columns: 1fr 2fr; }
 .page-split .plank h2 { font-size: 23px; letter-spacing: 2.5px; }
-.page-split .plank { padding: 12px 16px; min-height: 82px; display: flex; align-items: center; justify-content: center; }
-.page-split > .page-split-col > p:first-of-type { margin-top: 0; }
-.page-split .service-tiles { grid-template-columns: 1fr 1fr; gap: 18px; }
+.page-split .plank.small h3 { font-size: 19px; letter-spacing: 2px; }
+.page-split .plank { padding: 12px 16px; }
+.page-split .page-split-col > p:first-of-type { margin-top: 0; }
+.page-split .service-tiles { gap: 18px; }
 .page-split .service-tile { height: 128px; }
+.split-minor .video-embed { margin-bottom: 30px; }
+.split-photo { display: block; width: 100%; border-radius: 8px; margin-bottom: 4px; }
+/* compact text-only process steps inside the 1/3 column */
+.page-split .process { grid-template-columns: 1fr; gap: 14px; margin-top: 0; }
+.page-split .process-step { display: flex; gap: 16px; text-align: left; background: none; overflow: visible; align-items: flex-start; }
+.page-split .process-step img { display: none; }
+.page-split .process-step .step-num { margin-top: 2px; flex: 0 0 34px; }
+.page-split .process-step .step-body { padding: 0; }
+.page-split .process-step h4 { margin: 4px 0 4px; }
 .split-cta { text-align: center; margin: 26px 0 0; }
 .split-cta .btn { margin: 6px 4px; }
 
@@ -1017,7 +1029,8 @@ header#header { position: relative; z-index: 99; }
 
   .process, .testimonials, .species-grid, .footer-grid { grid-template-columns: 1fr; }
   .service-tiles { grid-template-columns: 1fr; }
-  .page-split { grid-template-columns: 1fr; gap: 40px; }
+  .page-split, .page-split.split-tree, .page-split.split-saw { grid-template-columns: 1fr; gap: 40px; }
+  .split-saw .split-major { order: -1; } /* sawmill above firewood when stacked */
   .page-split .service-tiles { grid-template-columns: 1fr 1fr; gap: 12px; }
   .page-split .service-tile { height: 104px; }
   .plank { padding: 12px 14px; }
