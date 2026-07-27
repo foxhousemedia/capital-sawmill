@@ -264,6 +264,7 @@ INDEX_BODY = f'''
     <div class="page-split split-tree">
       <div class="page-split-col split-major">
         {plank('Residential &amp; Commercial Tree Services')}
+        <img class="split-photo-inline" src="assets/img/100_0254-1.jpg" alt="Capital Sawmill bucket truck taking down a spruce" loading="lazy">
         <p>With over 30 years of experience, our tree experts trim or remove trees of any size that are unwanted or problematic. We handle all facets of tree care &mdash; removal, pruning, stump grinding, lacing, thinning, and crown reduction &mdash; and we get the job done in a timely fashion, leaving the place looking great.</p>
         <div class="service-tiles">
           <a class="service-tile" href="tree-removal/"><img src="assets/img/07-14-009.jpg" alt="Tree removal" loading="lazy"><span>Tree Removal</span></a>
