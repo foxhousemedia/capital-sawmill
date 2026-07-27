@@ -995,6 +995,7 @@ header#header { position: relative; z-index: 99; }
     margin: 14px 0 0;
     text-shadow: 0 2px 3px #000;
   }
+  .drawer-addr { color: #cfc6b8; text-decoration: underline; text-underline-offset: 3px; }
 
   /* sticky header: keep anchor targets from hiding under the bar */
   main [id], section[id] { scroll-margin-top: 78px; }

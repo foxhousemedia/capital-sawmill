@@ -173,7 +173,7 @@ def header(root=''):
   </ul>
   <div class="drawer-contact">
     <a class="drawer-call" href="{PHONE_TEL}">{SVG_PHONE} {PHONE_DISPLAY}</a>
-    <p>4119 US Highway 20, Nassau, NY 12123<br>Monday &ndash; Saturday &middot; 8AM &ndash; 6PM</p>
+    <p><a class="drawer-addr" href="https://www.google.com/maps/place/Capital+Sawmill+Service,+Tree+Service+%26+More/data=!4m2!3m1!1s0x0:0xd58ee223ea17ec14?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">4119 US Highway 20, Nassau, NY 12123</a><br>Monday &ndash; Saturday &middot; 8AM &ndash; 6PM</p>
   </div>
 </nav>'''
 
