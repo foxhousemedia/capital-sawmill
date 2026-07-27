@@ -277,12 +277,15 @@ header#header { position: relative; z-index: 99; }
   font-weight: 600;
   line-height: 1.15;
   text-align: center;
-  /* inset text: near-black fill with wood grain showing through the letters */
-  background: linear-gradient(rgba(8,6,4,.88), rgba(8,6,4,.88)), url("../tex/h2-bg.jpg");
+  /* engraved lettering: saturated burnt-brown fill, grain showing through,
+     short hard edges — dark top-left, light bottom-right (drop-shadow, NOT
+     text-shadow: with background-clip:text a text-shadow paints OVER the fill) */
+  background: linear-gradient(rgba(56,23,6,.85), rgba(56,23,6,.85)), url("../tex/h2-bg.jpg");
   background-size: auto, 600px 120px;
   background-position: center, center;
   color: transparent;
-  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  text-shadow: none;
+  filter: drop-shadow(-1px -1px 0 rgba(40,17,4,.4)) drop-shadow(1px 1px 0 rgba(255,255,255,.5));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
