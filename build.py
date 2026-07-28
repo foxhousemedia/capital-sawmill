@@ -418,12 +418,12 @@ INDEX_BODY = f'''
 <section class="section section-dark" id="contact-section">
   <div class="container">
     {plank('The Fastest Way to Reach Us? Call.')}
-    <div class="call-panel">
-      <p style="max-width:640px;margin:0 auto">Steve answers his phone, not his inbox. For estimates, slab availability, or a straight answer about your tree &mdash; call.</p>
-      <a class="big-phone" href="{PHONE_TEL}">{SVG_PHONE.replace('<svg ', '<svg style="width:30px;height:30px;margin-right:14px" ')}{PHONE_DISPLAY}</a>
-      <p class="call-note">Monday &ndash; Saturday, 8AM &ndash; 6PM &middot; Nassau, NY</p>
-    </div>
     <div class="contact-grid">
+      <div class="call-panel">
+        <p style="max-width:520px;margin:0 auto">Steve answers his phone, not his inbox. For estimates, slab availability, or a straight answer about your tree &mdash; call.</p>
+        <a class="big-phone" href="{PHONE_TEL}">{SVG_PHONE.replace('<svg ', '<svg style="width:30px;height:30px;margin-right:14px" ')}{PHONE_DISPLAY}</a>
+        <p class="call-note">Monday &ndash; Saturday, 8AM &ndash; 6PM &middot; Nassau, NY</p>
+      </div>
       <div>
         <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Rather write it down?</h3>
         <form id="estimate-form" class="contact-form" action="https://formsubmit.co/{EMAIL}" method="POST">
@@ -435,15 +435,6 @@ INDEX_BODY = f'''
           <textarea name="message" placeholder="Tell us about your tree or your project&hellip;"></textarea>
           <button class="btn btn-maroon" type="submit">Send Message</button>
         </form>
-      </div>
-      <div>
-        <h3 style="font-family:'Lato',sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--green-dark)">Or swing by the mill</h3>
-        <ul class="contact-info-list">
-          <li>{SVG_MARKER} 4119 US Highway 20, Nassau, NY 12123</li>
-          <li>{SVG_CLOCK} Monday &ndash; Saturday, 8AM &ndash; 6PM</li>
-          <li>{SVG_ENVELOPE} <a href="mailto:{EMAIL}">{EMAIL}</a></li>
-        </ul>
-        <p style="margin-top:18px">Come see the slabs in person &mdash; there&rsquo;s nothing like picking your own piece of wood.</p>
       </div>
     </div>
   </div>

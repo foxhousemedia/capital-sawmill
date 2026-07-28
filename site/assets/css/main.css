@@ -755,10 +755,11 @@ header#header { position: relative; z-index: 99; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 44px;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px;
   margin-top: 40px;
   text-align: left;
+  align-items: center;
 }
 .contact-form input, .contact-form textarea {
   width: 100%;
