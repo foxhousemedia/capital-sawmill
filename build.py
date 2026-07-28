@@ -296,9 +296,6 @@ INDEX_BODY = f'''
         <p class="split-cta"><a class="btn btn-call" href="{PHONE_TEL}">{SVG_PHONE} Call {PHONE_DISPLAY}</a> <a class="btn btn-light" href="tree-removal/">Explore Tree Services</a></p>
       </div>
       <div class="page-split-col split-minor">
-        <div class="video-embed">
-          <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
         {plank('From Your Tree to Your Table', small=True)}
         <div class="process">
           <div class="process-step">
@@ -322,6 +319,9 @@ INDEX_BODY = f'''
               <p>Your tree comes back as slabs, beams, or a finished piece &mdash; lumber with a story you already know.</p>
             </div>
           </div>
+        </div>
+        <div class="video-embed">
+          <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>

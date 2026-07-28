@@ -388,7 +388,16 @@ header#header { position: relative; z-index: 99; }
 .page-split .service-tile { height: 150px; }
 /* half-width inline photo, text wraps beside it */
 .split-photo-inline { float: left; width: 50%; margin: 4px 24px 14px 0; }
-.split-minor .video-embed { margin-bottom: 30px; }
+/* video rides below the process steps and stays pinned near the viewport
+   bottom while the section scrolls (sticky releases at section end) */
+.split-tree .split-minor { align-self: stretch; display: flex; flex-direction: column; }
+.split-tree .split-minor .video-embed {
+  margin-top: auto;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 24px;
+}
+.split-tree .split-minor .process { margin-bottom: 30px; }
 .split-photo { display: block; width: 100%; margin-bottom: 4px; }
 /* compact text-only process steps inside the 1/3 column */
 .page-split .process { grid-template-columns: 1fr; gap: 14px; margin-top: 0; }
@@ -1079,6 +1088,8 @@ header#header { position: relative; z-index: 99; }
   .page-split .service-tiles { grid-template-columns: 1fr 1fr; gap: 12px; }
   .page-split .service-tile { height: 104px; }
   .split-photo-inline { float: none; width: 100%; margin: 0 0 14px; }
+  /* no sticky video when the columns stack */
+  .split-tree .split-minor .video-embed { position: static; margin-top: 26px; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
