@@ -540,7 +540,7 @@ header#header { position: relative; z-index: 99; }
 /* full-bleed map section — no frame, no shadow */
 .section-map-full { padding: 0 0 52px; background: #fff; }
 .map-full-wrap { position: relative; }
-#service-map { height: 540px; width: 100%; display: block; z-index: 1; background: #e8eae7; }
+#service-map { height: 640px; width: 100%; display: block; z-index: 1; background: #e8eae7; }
 /* gray out the base map; the green service circle (SVG overlay pane) keeps its color */
 #service-map .leaflet-tile-pane { filter: grayscale(1) brightness(1.04) contrast(.96); }
 .map-overlay-title {
@@ -554,19 +554,25 @@ header#header { position: relative; z-index: 99; }
 }
 .map-overlay-title h2 {
   margin: 0;
-  background: rgba(255,255,255,.93);
   color: var(--green-dark);
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 23px;
-  padding: 12px 30px;
-  border-radius: 40px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  font-size: 19px;
+  text-shadow: 0 0 8px rgba(255,255,255,.9), 0 0 18px rgba(255,255,255,.7);
 }
-.map-below { margin-top: 30px; }
-.town-chips { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin-top: 26px; }
+.town-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  justify-content: center;
+  position: absolute;
+  left: 0; right: 0; bottom: 18px;
+  z-index: 500;
+  padding: 0 24px;
+  pointer-events: none;
+}
 .town-chips span {
   background: #f4f1ea;
   border: 1px solid #d8d2c4;
@@ -600,7 +606,7 @@ header#header { position: relative; z-index: 99; }
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   border: 1px solid rgba(255,255,255,.18);
-  padding: 34px 28px 24px;
+  padding: 46px 28px 40px;
   position: relative;
   font-size: 15.5px;
   line-height: 1.75;
@@ -609,11 +615,29 @@ header#header { position: relative; z-index: 99; }
 .testimonial::before {
   content: "\201C";
   font-family: Georgia, serif;
-  font-size: 64px;
+  font-size: 58px;
+  line-height: 1;
   color: #b6e39a;
   position: absolute;
-  top: -4px; left: 14px;
+  top: 6px; left: 10px;
   opacity: .55;
+}
+.testimonial::after {
+  content: "\201D";
+  font-family: Georgia, serif;
+  font-size: 58px;
+  line-height: 0.4;
+  color: #b6e39a;
+  position: absolute;
+  right: 12px; bottom: 8px;
+  opacity: .55;
+}
+.t-stars {
+  display: block;
+  color: #f2b01e;
+  font-size: 17px;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
 }
 .testimonial cite {
   display: block;
@@ -1045,7 +1069,9 @@ header#header { position: relative; z-index: 99; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }
   .testimonial-stage { padding: 56px 0 50px; }
-  #service-map { height: 360px; }
+  #service-map { height: 500px; }
   .map-overlay-title { top: 14px; }
-  .map-overlay-title h2 { font-size: 15px; letter-spacing: 2px; padding: 9px 18px; }
+  .map-overlay-title h2 { font-size: 15px; letter-spacing: 2px; }
+  .town-chips { gap: 5px; bottom: 12px; padding: 0 10px; }
+  .town-chips span { font-size: 11px; padding: 3px 9px; }
 }

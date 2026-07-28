@@ -363,13 +363,10 @@ INDEX_BODY = f'''
 <section class="section-map-full" id="service-area-section">
   <div class="map-full-wrap">
     <div id="service-map"></div>
-    <div class="map-overlay-title"><h2>Areas We Service</h2></div>
-  </div>
-  <div class="container map-below">
+    <div class="map-overlay-title"><h2>Service Area</h2></div>
     <div class="town-chips">
       <span>Albany</span><span>Chatham</span><span>Rensselaer</span><span>Columbia</span><span>Schenectady</span><span>East Greenbush</span><span>Troy</span><span>Cohoes</span><span>Latham</span><span>Colonie</span><span>Westmere</span><span>Delmar</span><span>Wynantskill</span><span>Westerlo</span><span>Rotterdam</span><span>New Lebanon</span><span>Ghent</span><span>Petersburg</span>
     </div>
-    <p class="nationwide-note">{GLYPHS['truck'].replace('<svg ', '<svg style="width:22px;height:22px;vertical-align:-4px;margin-right:8px;fill:var(--green)" ')} <strong>Custom lumber ships nationwide.</strong> For the right tree job we&rsquo;ll occasionally travel outside this area, too &mdash; <a href="{PHONE_TEL}">give us a call</a>.</p>
   </div>
 </section>
 
@@ -382,14 +379,17 @@ INDEX_BODY = f'''
     {plank('What Neighbors Say')}
     <div class="testimonials">
       <blockquote class="testimonial">
+        <span class="t-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         I want to thank you again for your prompt and very professional response to our tree problem. I was home and was able to see the tree removal process and the clean-up as well. All of you are a real credit to your business. Neither my wife nor I will hesitate to call upon you again.
         <cite>John Walden</cite>
       </blockquote>
       <blockquote class="testimonial">
+        <span class="t-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         Capital Sawmill has done tree work for us at 3 different times. We needed tree and stump removal and extensive trimming on very old, large maples. Steve and his crew did a terrific job. The entire team was very pleasant, the price was fair and the crew cleaned the area of all brush. I would recommend Capital Sawmill very highly.
         <cite>Mary LaFleur</cite>
       </blockquote>
       <blockquote class="testimonial">
+        <span class="t-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         I would like to thank you again for the amazing job you did at our house. We appreciate that you were able to come so quickly &mdash; it was comforting to know TRUE professionals were on the job! Thanks again!
         <cite>Billy Lauritsen</cite>
       </blockquote>
