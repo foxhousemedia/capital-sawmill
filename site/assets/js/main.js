@@ -41,7 +41,8 @@
   var mapEl = document.getElementById('service-map');
   if (mapEl && window.L) {
     var hq = [42.537712, -73.662602]; // 4119 US Highway 20, Nassau NY
-    var map = L.map('service-map', { scrollWheelZoom: false }).setView(hq, 9);
+    var map = L.map('service-map', { scrollWheelZoom: false, zoomControl: false }).setView(hq, 9);
+    L.control.zoom({ position: 'topright' }).addTo(map);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; OpenStreetMap &copy; CARTO',
       maxZoom: 18

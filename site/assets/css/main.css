@@ -569,22 +569,23 @@ header#header { position: relative; z-index: 99; }
 #service-map .leaflet-tile-pane { filter: grayscale(1) brightness(1.04) contrast(.96); }
 .map-overlay-title {
   position: absolute;
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 30px;
+  left: 34px;
   z-index: 500;
   pointer-events: none;
-  white-space: nowrap;
 }
 .map-overlay-title h2 {
   margin: 0;
+  display: inline-block;
+  background: #fff;
   color: var(--green-dark);
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 19px;
-  text-shadow: 0 0 8px rgba(255,255,255,.9), 0 0 18px rgba(255,255,255,.7);
+  font-size: 36px;
+  line-height: 1.25;
+  padding: 18px 28px;
 }
 .town-chips {
   display: flex;
@@ -635,6 +636,7 @@ header#header { position: relative; z-index: 99; }
   font-size: 15.5px;
   line-height: 1.75;
   color: #eef3e8;
+  text-align: center;
 }
 .testimonial::before {
   content: "\201C";
@@ -1095,8 +1097,8 @@ header#header { position: relative; z-index: 99; }
   .section { padding: 52px 0; }
   .testimonial-stage { padding: 56px 0 50px; }
   #service-map { height: 500px; }
-  .map-overlay-title { top: 14px; }
-  .map-overlay-title h2 { font-size: 15px; letter-spacing: 2px; }
+  .map-overlay-title { top: 14px; left: 14px; }
+  .map-overlay-title h2 { font-size: 20px; padding: 10px 16px; }
   .town-chips { gap: 5px; bottom: 12px; padding: 0 10px; }
   .town-chips span { font-size: 11px; padding: 3px 9px; }
 }
