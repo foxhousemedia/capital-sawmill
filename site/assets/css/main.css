@@ -563,7 +563,10 @@ header#header { position: relative; z-index: 99; }
    ============================================================ */
 /* full-bleed map section — no frame, no shadow */
 .section-map-full { padding: 0; background: #fff; }
-.map-full-wrap { position: relative; }
+.map-full-wrap { position: relative; overflow: hidden; }
+/* crop 50px off the top of the map canvas for visual balance */
+#service-map { margin-top: -50px; }
+#service-map .leaflet-top { top: 50px; }
 #service-map { height: 640px; width: 100%; display: block; z-index: 1; background: #e8eae7; }
 /* gray out the base map; the green service circle (SVG overlay pane) keeps its color */
 #service-map .leaflet-tile-pane { filter: grayscale(1) brightness(1.04) contrast(.96); }
