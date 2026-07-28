@@ -41,8 +41,34 @@
   var mapEl = document.getElementById('service-map');
   if (mapEl && window.L) {
     var hq = [42.537712, -73.662602]; // 4119 US Highway 20, Nassau NY
-    var map = L.map('service-map', { scrollWheelZoom: false, zoomControl: false }).setView(hq, 9);
+    var map = L.map('service-map', { scrollWheelZoom: false, zoomControl: false, dragging: false, touchZoom: false }).setView(hq, 9);
     L.control.zoom({ position: 'topright' }).addTo(map);
+
+    // pan lock toggle: page scrolling wins by default; tap to unlock the map
+    var PanToggle = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        var wrap = L.DomUtil.create('div', 'leaflet-bar');
+        var btn = L.DomUtil.create('a', 'map-pan-toggle', wrap);
+        btn.href = '#';
+        btn.innerHTML = '\uD83D\uDD12';
+        btn.title = 'Unlock map panning';
+        btn.setAttribute('role', 'button');
+        btn.setAttribute('aria-pressed', 'false');
+        L.DomEvent.on(btn, 'click', function (e) {
+          L.DomEvent.stop(e);
+          var unlocked = !map.dragging.enabled();
+          if (unlocked) { map.dragging.enable(); map.touchZoom.enable(); }
+          else { map.dragging.disable(); map.touchZoom.disable(); }
+          btn.innerHTML = unlocked ? '\uD83D\uDD13' : '\uD83D\uDD12';
+          btn.title = unlocked ? 'Lock map panning' : 'Unlock map panning';
+          btn.setAttribute('aria-pressed', unlocked ? 'true' : 'false');
+          btn.classList.toggle('unlocked', unlocked);
+        });
+        return wrap;
+      }
+    });
+    map.addControl(new PanToggle());
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; OpenStreetMap &copy; CARTO',
       maxZoom: 18

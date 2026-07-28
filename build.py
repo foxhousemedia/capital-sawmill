@@ -127,7 +127,7 @@ def header(root=''):
             <li id="header-contact-button"><a href="{root}contact/">Contact</a></li>
           </ul>
         </nav>
-        <div id="capital-sawmill-logo"><a href="{root}"><img src="{root}assets/img/capital-sawmill-logo.png" width="144" height="80" alt="Capital Sawmill Service, LLC"></a></div>
+        <div id="capital-sawmill-logo"><a href="{root}"><img src="{root}assets/img/capital-sawmill-logo.png" width="144" height="80" alt="Capital Sawmill Service, LLC"><span class="mobile-wordmark">Capital Sawmill&trade;</span></a></div>
         <div class="mobile-actions">
           <a id="mobile-call" href="{PHONE_TEL}" aria-label="Call Capital Sawmill">{SVG_PHONE}</a>
           <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">

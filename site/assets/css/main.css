@@ -149,6 +149,8 @@ header#header { position: relative; z-index: 99; }
 #main-nav .ws-cherry { background-position: -60px -60px; }
 #main-nav .ws-pine   { background-position: -120px 0; }
 
+.mobile-wordmark { display: none; }
+
 .clear-float { clear: both; }
 
 /* ============================================================
@@ -633,6 +635,8 @@ body.video-open { overflow: hidden; }
 /* crop 50px off the top of the map canvas for visual balance */
 #service-map { margin-top: -50px; }
 #service-map .leaflet-top { top: 50px; }
+.map-pan-toggle { font-size: 15px; }
+.map-pan-toggle.unlocked { background: var(--green) !important; color: #fff !important; }
 #service-map { height: 640px; width: 100%; display: block; z-index: 1; background: #e8eae7; }
 /* gray out the base map; the green service circle (SVG overlay pane) keeps its color */
 #service-map .leaflet-tile-pane { filter: grayscale(1) brightness(1.04) contrast(.96); }
@@ -994,7 +998,18 @@ body.video-open { overflow: hidden; }
     min-height: 58px;
   }
   #capital-sawmill-logo { position: static; width: auto; height: auto; }
+  #capital-sawmill-logo a { display: flex; align-items: center; gap: 10px; }
   #capital-sawmill-logo img { width: 101px; height: 56px; display: block; }
+  .mobile-wordmark {
+    display: inline-block;
+    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: var(--green-dark);
+    line-height: 1.1;
+  }
 
   .mobile-actions { display: flex; align-items: center; gap: 6px; }
   #mobile-call {
@@ -1173,7 +1188,7 @@ body.video-open { overflow: hidden; }
   #hero .hero-shade { display: none; }
   #hero .hero-copy { position: static; transform: none; text-align: center; padding: 26px 18px 34px; }
   #hero h1 { font-size: 27px; letter-spacing: 3px; }
-  .hero-sub { display: none; }
+  #hero .hero-sub { max-width: none; margin: 0 0 20px; font-size: 15px; }
 
   .process, .testimonials, .species-grid, .footer-grid { grid-template-columns: 1fr; }
   .service-tiles { grid-template-columns: 1fr; }
@@ -1181,8 +1196,8 @@ body.video-open { overflow: hidden; }
   .page-split .service-tiles { grid-template-columns: 1fr 1fr; gap: 12px; }
   .page-split .service-tile { height: 104px; }
   .split-photo-inline { float: none; width: 100%; margin: 0 0 14px; }
-  /* no sticky video when the columns stack */
-  .split-tree .split-minor .video-thumb { position: static; margin-top: 26px; }
+  /* no sticky video when the columns stack (relative keeps the play overlay anchored) */
+  .split-tree .split-minor .video-thumb { position: relative; top: auto; margin-top: 26px; }
   #video-close { top: -44px; right: 4px; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
@@ -1191,6 +1206,9 @@ body.video-open { overflow: hidden; }
   #service-map { height: 500px; }
   .map-overlay-title { top: 14px; left: 14px; }
   .map-overlay-title h2 { font-size: 20px; padding: 10px 16px; }
+  #footer { text-align: center; }
+  #footer .footer-grid img { margin-left: auto; margin-right: auto; }
+  .footer-bottom { justify-content: center; gap: 6px; text-align: center; }
   .town-chips { gap: 5px; bottom: 12px; padding: 0 10px; }
   .town-chips span { font-size: 11px; padding: 3px 9px; }
 }
