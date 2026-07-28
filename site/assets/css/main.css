@@ -399,12 +399,16 @@ header#header { position: relative; z-index: 99; }
 .page-split .step-badge .step-num {
   display: block;
   position: absolute;
-  right: -9px; bottom: -6px;
-  width: 28px; height: 28px;
-  line-height: 24px;
-  font-size: 14px;
+  right: -12px; top: -10px;
+  width: auto; height: auto;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: #8d8d8d;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
   margin: 0;
-  border: 2px solid #fff;
 }
 .page-split .process-step .step-body { padding: 0; }
 .page-split .process-step h4 { margin: 4px 0 4px; }
