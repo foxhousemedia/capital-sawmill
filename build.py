@@ -47,7 +47,8 @@ def head(title, desc, root='', leaflet=False):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="icon" type="image/png" href="{root}assets/img/capital-sawmill-logo.png">
+<link rel="icon" type="image/png" href="{root}assets/img/favicon.png">
+<link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
 {GA_FONTS}
 {lf}
 <link rel="stylesheet" href="{root}assets/css/main.css">
