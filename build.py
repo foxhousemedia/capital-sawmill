@@ -302,26 +302,23 @@ INDEX_BODY = f'''
         {plank('From Your Tree to Your Table', small=True)}
         <div class="process">
           <div class="process-step">
-            <img src="assets/img/07-14-009.jpg" alt="Tree removal in progress" loading="lazy">
+            <div class="step-badge"><img src="assets/img/step-takedown.png" alt="" width="58" height="58"><span class="step-num">1</span></div>
             <div class="step-body">
-              <span class="step-num">1</span>
-              <h4>We Take It Down <span class="step-glyph">{GLYPHS['chainsaw']}</span></h4>
+              <h4>We Take It Down</h4>
               <p>Licensed, insured, and equipped for trees of any size &mdash; problematic or just in the way.</p>
             </div>
           </div>
           <div class="process-step">
-            <img src="assets/img/milling-on-site.jpg" alt="Milling a log on site" loading="lazy">
+            <div class="step-badge"><img src="assets/img/step-mill.png" alt="" width="58" height="58"><span class="step-num">2</span></div>
             <div class="step-body">
-              <span class="step-num">2</span>
-              <h4>We Mill It <span class="step-glyph">{GLYPHS['wheelsaw']}</span></h4>
+              <h4>We Mill It</h4>
               <p>On location with our portable band sawmill, or on the stationary mill at our shop in Nassau.</p>
             </div>
           </div>
           <div class="process-step">
-            <img src="assets/img/finished-walnut-slab.jpg" alt="Finished walnut slab" loading="lazy">
+            <div class="step-badge"><img src="assets/img/step-keep.png" alt="" width="58" height="58"><span class="step-num">3</span></div>
             <div class="step-body">
-              <span class="step-num">3</span>
-              <h4>You Keep It <span class="step-glyph">{GLYPHS['saw']}</span></h4>
+              <h4>You Keep It</h4>
               <p>Your tree comes back as slabs, beams, or a finished piece &mdash; lumber with a story you already know.</p>
             </div>
           </div>

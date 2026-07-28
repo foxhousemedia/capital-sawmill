@@ -392,9 +392,20 @@ header#header { position: relative; z-index: 99; }
 .split-photo { display: block; width: 100%; margin-bottom: 4px; }
 /* compact text-only process steps inside the 1/3 column */
 .page-split .process { grid-template-columns: 1fr; gap: 14px; margin-top: 0; }
-.page-split .process-step { display: flex; gap: 16px; text-align: left; background: none; overflow: visible; align-items: flex-start; }
-.page-split .process-step img { display: none; }
-.page-split .process-step .step-num { margin-top: 2px; flex: 0 0 34px; }
+.page-split .process-step { display: flex; gap: 18px; text-align: left; background: none; overflow: visible; align-items: flex-start; }
+/* icon + number fused into one badge graphic */
+.step-badge { position: relative; flex: 0 0 58px; width: 58px; height: 58px; margin-top: 2px; }
+.page-split .step-badge img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.page-split .step-badge .step-num {
+  display: block;
+  position: absolute;
+  right: -9px; bottom: -6px;
+  width: 28px; height: 28px;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0;
+  border: 2px solid #fff;
+}
 .page-split .process-step .step-body { padding: 0; }
 .page-split .process-step h4 { margin: 4px 0 4px; }
 .split-cta { text-align: center; margin: 26px 0 0; }
