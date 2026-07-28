@@ -680,7 +680,7 @@ header#header { position: relative; z-index: 99; }
 /* ============================================================
    FAQ (dark gray band)
    ============================================================ */
-.section-faq { background: #333; }
+.section-faq { background: #222 url(../tex/footer-bg.jpg); }
 .faq { max-width: 820px; margin: 0 auto; }
 .faq details {
   background: #fff;

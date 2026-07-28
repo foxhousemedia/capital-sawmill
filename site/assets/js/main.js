@@ -21,7 +21,7 @@
   }
 
   // ---------- Charred-wood texture parallax (top bar & footer) ----------
-  var bgEls = ['top-info', 'footer'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  var bgEls = ['top-info', 'footer', 'faq-section'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
   if (bgEls.length && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     var bgTicking = false;
     var bgUpdate = function () {

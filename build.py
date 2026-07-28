@@ -395,7 +395,7 @@ INDEX_BODY = f'''
   </div>
 </section>
 
-<section class="section section-faq">
+<section class="section section-faq" id="faq-section">
   <div class="container">
     {plank('Frequently Asked Questions', alt=True)}
     <div class="faq">
