@@ -220,7 +220,7 @@ def footer(root=''):
       </div>
       <div>
         <h3>Come Visit Us</h3>
-        <p>{SVG_CLOCK} Monday &ndash; Saturday<br>8AM &ndash; 6PM</p>
+        <p>Monday &ndash; Saturday<br>8AM &ndash; 6PM</p>
         <h3>Explore</h3>
         <p style="line-height:2.1">
           <a href="{root}wood-slabs/">Wood Slabs</a><br>
