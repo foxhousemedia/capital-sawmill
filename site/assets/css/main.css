@@ -1061,7 +1061,6 @@ header#header { position: relative; z-index: 99; }
   .process, .testimonials, .species-grid, .footer-grid { grid-template-columns: 1fr; }
   .service-tiles { grid-template-columns: 1fr; }
   .page-split, .page-split.split-tree, .page-split.split-saw { grid-template-columns: 1fr; gap: 40px; }
-  .split-saw .split-major { order: -1; } /* sawmill above firewood when stacked */
   .page-split .service-tiles { grid-template-columns: 1fr 1fr; gap: 12px; }
   .page-split .service-tile { height: 104px; }
   .split-photo-inline { float: none; width: 100%; margin: 0 0 14px; }

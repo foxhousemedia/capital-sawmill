@@ -335,13 +335,7 @@ INDEX_BODY = f'''
 
 <section class="section section-cream" id="sawmill-products">
   <div class="container">
-    <div class="page-split split-saw">
-      <div class="page-split-col split-minor">
-        {plank('Firewood', small=True, icon='firewood', icon_after=True)}
-        <img class="split-photo" src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy">
-        <p>Seasoned hardwood firewood for sale in Nassau NY &mdash; stored clean and dry under our pavilion, sold by the face cord, and delivered across the Capital Region. Camp wood, kindling kegs, and smoker chunks too.</p>
-        <p class="split-cta"><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
-      </div>
+    <div class="page-split split-tree">
       <div class="page-split-col split-major">
         {plank('Sawmill Services &amp; Wood Products')}
         <p>We mill custom lumber for bar tops, tables, counters, mantels, and much more &mdash; live-edge slabs up to 30&Prime; wide, air-dried under cover for up to two years. Milling on location with our portable band sawmill, or at the mill in Nassau. Slabs and finished pieces ship nationwide.</p>
@@ -355,6 +349,12 @@ INDEX_BODY = f'''
           <a class="service-tile" href="wood-products/#deer-plaques"><img src="assets/img/wp-dpm.jpg" alt="Deer plaque mounts" loading="lazy"><span>Deer Plaques</span></a>
         </div>
         <p class="split-cta"><a class="btn btn-maroon" href="wood-slabs/">Buy Wood Slabs</a> <a class="btn btn-call" href="wood-products/">Browse Wood Products</a></p>
+      </div>
+      <div class="page-split-col split-minor">
+        {plank('Firewood', small=True, icon='firewood', icon_after=True)}
+        <img class="split-photo" src="assets/img/wp-firewood.jpg" alt="Seasoned firewood" loading="lazy">
+        <p>Seasoned hardwood firewood for sale in Nassau NY &mdash; stored clean and dry under our pavilion, sold by the face cord, and delivered across the Capital Region. Camp wood, kindling kegs, and smoker chunks too.</p>
+        <p class="split-cta"><a class="btn btn-call" href="firewood/">Firewood Pricing &amp; Availability</a></p>
       </div>
     </div>
   </div>
