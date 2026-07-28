@@ -17,7 +17,7 @@
 * { box-sizing: border-box; }
 
 /* black canvas so rubber-band overscroll shows dark, not white */
-html { scroll-behavior: smooth; background: #000; }
+html { scroll-behavior: smooth; background: #222; }
 
 body {
   margin: 0;
