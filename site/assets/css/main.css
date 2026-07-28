@@ -713,6 +713,26 @@ header#header { position: relative; z-index: 99; }
 }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq .faq-a { padding: 0 22px 20px; line-height: 1.7; color: #555; }
+/* answer entrance: fade/slide everywhere... */
+.faq details[open] .faq-a { animation: faq-in .35s ease both; }
+@keyframes faq-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ...plus smooth height expansion in browsers that support it */
+@supports (interpolate-size: allow-keywords) {
+  :root { interpolate-size: allow-keywords; }
+  .faq details::details-content {
+    opacity: 0;
+    block-size: 0;
+    overflow-y: clip;
+    transition: content-visibility .35s allow-discrete, opacity .35s ease, block-size .35s ease;
+  }
+  .faq details[open]::details-content {
+    opacity: 1;
+    block-size: auto;
+  }
+}
 
 /* ============================================================
    CONTACT / CALL PANEL
