@@ -101,6 +101,26 @@
     });
   }
 
+  // ---------- Video modal ----------
+  var vOpen = document.getElementById('video-open');
+  var vModal = document.getElementById('video-modal');
+  if (vOpen && vModal) {
+    var vFrame = document.getElementById('video-frame');
+    var vClose = document.getElementById('video-close');
+    var vBackdrop = vModal.querySelector('.video-modal-backdrop');
+    var setVideo = function (open) {
+      vModal.hidden = !open;
+      document.body.classList.toggle('video-open', open);
+      vFrame.src = open ? vFrame.getAttribute('data-src') : 'about:blank';
+    };
+    vOpen.addEventListener('click', function () { setVideo(true); });
+    if (vClose) vClose.addEventListener('click', function () { setVideo(false); });
+    if (vBackdrop) vBackdrop.addEventListener('click', function () { setVideo(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !vModal.hidden) setVideo(false);
+    });
+  }
+
   // ---------- Contact form ----------
   var form = document.getElementById('estimate-form');
   if (form) {

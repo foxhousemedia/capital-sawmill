@@ -311,7 +311,7 @@ header#header { position: relative; z-index: 99; }
 
 /* glyph icons in headings — tinted like the engraved letters */
 .plank-glyph { display: inline-block; vertical-align: -2px; margin-right: 16px; }
-.plank-glyph.after { margin: 0 0 0 16px; }
+.plank-glyph.after { margin: 0 0 0 16px; vertical-align: 0.09em; }
 .plank-glyph svg { width: .92em; height: .92em; fill: #51301f; display: inline-block; vertical-align: middle; }
 .step-glyph { display: inline-block; margin-left: 8px; }
 .step-glyph svg { width: 19px; height: 19px; fill: var(--green-dark); vertical-align: -4px; }
@@ -389,16 +389,81 @@ header#header { position: relative; z-index: 99; }
 .page-split .service-tile { height: 150px; }
 /* half-width inline photo, text wraps beside it */
 .split-photo-inline { float: left; width: 50%; margin: 4px 24px 14px 0; }
-/* video rides below the process steps and stays pinned near the viewport
-   bottom while the section scrolls (sticky releases at section end) */
+/* video button sits after the steps; once scrolled to, it sticks near the
+   top of the viewport until the section ends */
 .split-tree .split-minor { align-self: stretch; display: flex; flex-direction: column; }
-.split-tree .split-minor .video-embed {
-  margin-top: auto;
+.split-tree .split-minor .video-thumb {
+  margin-top: 30px;
   position: sticky;
   position: -webkit-sticky;
-  bottom: 24px;
+  top: 24px;
 }
-.split-tree .split-minor .process { margin-bottom: 30px; }
+
+/* video thumbnail styled as a big play button */
+.video-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.video-thumb img { display: block; width: 100%; }
+.video-thumb::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.05) 45%);
+  transition: background .3s;
+}
+.video-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -55%);
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: transform .25s, background .3s;
+}
+.video-play svg { width: 22px; height: 22px; margin-left: 4px; }
+.video-thumb:hover .video-play { transform: translate(-50%, -55%) scale(1.12); background: var(--green-hover); }
+.video-thumb-label {
+  position: absolute;
+  left: 0; right: 0; bottom: 12px;
+  z-index: 1;
+  color: #fff;
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,.8);
+}
+
+/* modal player */
+#video-modal { position: fixed; inset: 0; z-index: 3000; display: flex; align-items: center; justify-content: center; }
+#video-modal[hidden] { display: none; }
+.video-modal-backdrop { position: absolute; inset: 0; background: rgba(4,8,3,.85); }
+.video-modal-box { position: relative; width: min(1100px, 92vw); z-index: 1; }
+#video-close {
+  position: absolute;
+  top: -46px; right: 0;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+body.video-open { overflow: hidden; }
 .split-photo { display: block; width: 100%; margin-bottom: 4px; }
 /* compact text-only process steps inside the 1/3 column */
 .page-split .process { grid-template-columns: 1fr; gap: 14px; margin-top: 0; }
@@ -799,6 +864,7 @@ header#header { position: relative; z-index: 99; }
   align-items: start;
 }
 .footer-grid svg { width: 16px; height: 16px; vertical-align: -2px; margin-right: 8px; }
+#footer svg { color: #fff; }
 .footer-grid h3 {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
@@ -1116,7 +1182,8 @@ header#header { position: relative; z-index: 99; }
   .page-split .service-tile { height: 104px; }
   .split-photo-inline { float: none; width: 100%; margin: 0 0 14px; }
   /* no sticky video when the columns stack */
-  .split-tree .split-minor .video-embed { position: static; margin-top: 26px; }
+  .split-tree .split-minor .video-thumb { position: static; margin-top: 26px; }
+  #video-close { top: -44px; right: 4px; }
   .plank { padding: 12px 14px; }
   .plank h2, .plank .h2 { font-size: 24px; letter-spacing: 3px; }
   .section { padding: 52px 0; }

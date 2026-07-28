@@ -320,13 +320,25 @@ INDEX_BODY = f'''
             </div>
           </div>
         </div>
-        <div class="video-embed">
-          <iframe title="How Problematic Trees are Turned into Custom Lumber" src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <button id="video-open" class="video-thumb" aria-label="Watch: How Problematic Trees are Turned into Custom Lumber">
+          <img src="assets/img/video-thumb.jpg" alt="Tree felling in action" loading="lazy">
+          <span class="video-play" aria-hidden="true"><svg viewBox="0 0 448 512" fill="currentColor"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg></span>
+          <span class="video-thumb-label">Watch How It&rsquo;s Done</span>
+        </button>
       </div>
     </div>
   </div>
 </section>
+
+<div id="video-modal" hidden>
+  <div class="video-modal-backdrop"></div>
+  <div class="video-modal-box">
+    <button id="video-close" aria-label="Close video">&times;</button>
+    <div class="video-embed">
+      <iframe id="video-frame" title="How Problematic Trees are Turned into Custom Lumber" data-src="https://www.youtube-nocookie.com/embed/0YnnWF1ilhc?autoplay=1" src="about:blank" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
 
 <div class="grain-divider"></div>
 
