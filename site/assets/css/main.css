@@ -39,7 +39,7 @@ a:hover, a:active { color: var(--green-hover); text-decoration: none; }
    TOP INFO BAR — exact clone of current site
    ============================================================ */
 #top-info {
-  background: #222 url(../tex/footer-bg.jpg) fixed;
+  background: #222 url(../tex/footer-bg.jpg);
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -734,7 +734,7 @@ header#header { position: relative; z-index: 99; }
    ============================================================ */
 #footer {
   clear: both;
-  background: #222 url(../tex/footer-bg.jpg) fixed;
+  background: #222 url(../tex/footer-bg.jpg);
   padding: 42px 0 14px;
   color: #eee;
 }
@@ -853,7 +853,7 @@ header#header { position: relative; z-index: 99; }
 
 @media (max-width: 991px) {
   /* iOS/Android don't do background-attachment: fixed */
-  #top-info, #footer, .section-forest { background-attachment: scroll; }
+  .section-forest { background-attachment: scroll; }
 }
 
 @media (max-width: 767px) {

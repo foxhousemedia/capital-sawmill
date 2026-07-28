@@ -20,6 +20,23 @@
     update();
   }
 
+  // ---------- Charred-wood texture parallax (top bar & footer) ----------
+  var bgEls = ['top-info', 'footer'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if (bgEls.length && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    var bgTicking = false;
+    var bgUpdate = function () {
+      bgEls.forEach(function (el) {
+        var top = el.getBoundingClientRect().top;
+        el.style.backgroundPosition = '0px ' + (top * -0.35).toFixed(1) + 'px';
+      });
+      bgTicking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!bgTicking) { requestAnimationFrame(bgUpdate); bgTicking = true; }
+    }, { passive: true });
+    bgUpdate();
+  }
+
   // ---------- Service-area map (Leaflet) ----------
   var mapEl = document.getElementById('service-map');
   if (mapEl && window.L) {
